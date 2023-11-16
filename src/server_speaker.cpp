@@ -1,6 +1,27 @@
+// MIT License
+
+// Copyright (c) 2023 f-coronado
+
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+
 #include "rclcpp/rclcpp.hpp"
-// #include "example_interfaces/srv/add_two_ints.hpp"
-#include "string_msgs/srv/Speak.hpp"
+#include "string_msgs/srv/speak.hpp"
 #include <string>
 #include <memory>
 
@@ -16,10 +37,13 @@ void speak(const std::shared_ptr<string_msgs::srv::Speak::Request> request,
 {
 
 
-  response->output = "Hi, my name is " << request->name << "And today is " << request->date;
+  response->output = "Hi, my name is " + request->name + "And today is " + request->date;
 
-  RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Incoming request by:\n" request->name << "Timestamp is" << request->date);
-  RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Sending back the generated response: " << response->output);
+  RCLCPP_INFO(rclcpp::get_logger("rclcpp"),"Incoming request by\nname: %s\nTimestamp is: %s",
+  request->name.c_str(),
+  request->date.c_str());
+  // RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Sending back the generated response:   %s" << response->output << "]");
+  RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Sending back the generated response: %s", response->output.c_str());
 
 
 }
@@ -43,9 +67,9 @@ int main(int argc, char **argv)
   * @brief Designate the speak service as the service for the server node
   */
   rclcpp::Service<string_msgs::srv::Speak>::SharedPtr service =
-    node->create_service<string_msgs::src::Speak>("speak", &speak);
+    node->create_service<string_msgs::srv::Speak>("speak", &speak);
 
-  RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Ready hear a reply.");
+  RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Ready hear a name and date:.");
 
 
   /**

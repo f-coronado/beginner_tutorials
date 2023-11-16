@@ -25,12 +25,19 @@ ament_target_dependencies(listener rclcpp std_msgs)
 add_executable(server src/server_speaker.cpp)
 ament_target_dependencies(server rclcpp string_msgs)
 
+add_executable(client src/client_response.cpp)
+ament_target_dependencies(client rclcpp string_msgs)
+
 # adding targets so ros2 run can find the executable
 install(TARGETS
   talker
   listener
   server
+  client
   DESTINATION lib/${PROJECT_NAME}
 )
+
+install(DIRECTORY launch
+DESTINATION share/${PROJECT_NAME}/)
 
 ament_package()

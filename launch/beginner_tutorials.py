@@ -15,11 +15,11 @@ def generate_launch_description():
             executable='listener',
             name='listener'
         ),
-        # Node(
-        #     package='cpp_pubsub',
-        #     executable='server',
-        #     name='server',
-        # )
+        Node(
+            package='cpp_pubsub',
+            executable='server',
+            name='server',
+        )
 
         # DeclareLaunchArgument(
         #     "talker_rate",

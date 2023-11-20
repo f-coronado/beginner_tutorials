@@ -21,7 +21,7 @@
 // SOFTWARE.
 
 #include "rclcpp/rclcpp.hpp"
-#include "string_msgs/srv/speak.hpp"
+#include <cpp_pubsub/srv/speak.hpp>
 #include <string>
 #include <memory>
 
@@ -39,13 +39,13 @@ int main(int argc, char **argv)
     * @brief Create client node
     */
     std::shared_ptr<rclcpp::Node> node = rclcpp::Node::make_shared("client_response");
-    rclcpp::Client<string_msgs::srv::Speak>::SharedPtr client =
-    node->create_client<string_msgs::srv::Speak>("/speak");
+    rclcpp::Client<cpp_pubsub::srv::Speak>::SharedPtr client =
+    node->create_client<cpp_pubsub::srv::Speak>("/talker");
 
     /**
     * @brief Create request, structure is defined by .srv file
     */
-    auto request = std::make_shared<string_msgs::srv::Speak::Request>();
+    auto request = std::make_shared<cpp_pubsub::srv::Speak::Request>();
     request->name = argv[1];
     request->date = argv[2];
 

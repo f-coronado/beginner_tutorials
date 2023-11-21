@@ -1,5 +1,3 @@
-# Beginner Tutorials
-
 ## Overview
 This ros 2 project is a simple publisher and subscriber demo. A publisher named talker is created to broadcast a string onto the topic. A subscriber named listener is created to subscribe to what is broadcasted over the topic, which is only being broadcasted to by the talker. 
 
@@ -7,7 +5,7 @@ This ros 2 project is a simple publisher and subscriber demo. A publisher named 
 Clone the project into your ros2_ws/src/
 ```sh
 cd ~/ros2_ws/src/
-git clone https://github.com/f-coronado/beginner_tutorials.git
+git clone https://github.com/f-coronado/cpp_pubsub.git
 ```
 
 Navigate into your ros2 workspace

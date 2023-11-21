@@ -21,9 +21,9 @@
 // SOFTWARE.
 
 /**
-* @file publisher_member_function.cpp
+* @file subscriber_member_function.cpp
 * @author f-coronado
-* @brief Publisher script
+* @brief Subscriber script
 * @date 11/20/2023
 *
 * @copyright Copyright (c) 2023

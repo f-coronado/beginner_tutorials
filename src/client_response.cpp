@@ -19,6 +19,17 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
+
+/**
+* @file client_response.cpp
+* @author f-coronado
+* @brief Client script
+* @date 11/20/2023
+*
+* @copyright Copyright (c) 2023
+*
+*/
+
 #include <memory>
 #include <string>
 #include <cpp_pubsub/srv/speak.hpp>

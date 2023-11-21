@@ -21,9 +21,9 @@
 // SOFTWARE.
 
 /**
-* @file server_speaker.cpp
+* @file publisher_member_function.cpp
 * @author f-coronado
-* @brief Server script
+* @brief Publisher script
 * @date 11/20/2023
 *
 * @copyright Copyright (c) 2023
@@ -57,8 +57,6 @@ class MinimalPublisher : public rclcpp::Node {
      * @brief Define the parameter as 'name'
      */
     this->declare_parameter("name", "Fabrizzio", param_desc);
-    auto param = this->get_parameter("name");
-    auto name = param.get_parameter_value().get<std::string>();
     RCLCPP_DEBUG(this->get_logger(), "The default parameter is Fabrizzio");
 
     /**

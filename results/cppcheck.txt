@@ -1,5 +1,13 @@
-fabrizzio@lenovo:cpp_pubsub$ cppcheck --enable=all --std=c++17 --suppress=missingInclude $(find . -name *.cpp | grep -vE -e "^./build/")
+cppcheck --enable=all --std=c++11 -I include/ --suppress=missingInclude $( find . -name *.cpp | grep -vE -e "^./build/" )
+(information) Couldn't find path given by -I 'include/'
+Checking src/client_response.cpp ...
+1/4 files checked 20% done
 Checking src/publisher_member_function.cpp ...
-1/2 files checked 56% done
+2/4 files checked 62% done
+Checking src/server_speaker.cpp ...
+src/server_speaker.cpp:80:62: style: Variable 'service' is assigned a value that is never used. [unreadVariable]
+  rclcpp::Service<cpp_pubsub::srv::Speak>::SharedPtr service =
+                                                             ^
+3/4 files checked 83% done
 Checking src/subscriber_member_function.cpp ...
-2/2 files checked 100% done
+4/4 files checked 100% done

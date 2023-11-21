@@ -9,8 +9,8 @@
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
 
-// The above copyright notice and this permission notice shall be included in all
-// copies or substantial portions of the Software.
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
 
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -20,74 +20,71 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 /**
-* @file publisher_member_function.cpp
-* @author f-coronado
-* @brief Publisher script
-* @date 11/20/2023
-*
-* @copyright Copyright (c) 2023
-*
-*/
+ * @file server_speaker.cpp
+ * @author f-coronado
+ * @brief Server script
+ * @date 11/20/2023
+ *
+ * @copyright Copyright (c) 2023
+ *
+ */
 
-#include <rclcpp/rclcpp.hpp>
-#include <cpp_pubsub/srv/speak.hpp>
-#include <string>
 #include <memory>
-
-  /**
-  * @brief Returns the response based on request
-  *
-  * @param request Two strings: name, date
-  * @param response String: output
-  */
-  void speak(const std::shared_ptr<cpp_pubsub::srv::Speak::Request> request,
-            std::shared_ptr<cpp_pubsub::srv::Speak::Response>      response){
-
-    response->output = "Hi, my name is " + request->name + " and today is " + request->date;
-
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"),"Incoming request by\nname: %s\nTimestamp is: %s",
-    request->name.c_str(),
-    request->date.c_str());
-    // RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Sending back the generated response:   %s" << response->output << "]");
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Sending back the generated response: %s", response->output.c_str());
-
-  };
-
+#include <string>
+#include <cpp_pubsub/srv/speak.hpp>
+#include <rclcpp/rclcpp.hpp>
 
 /**
-* @brief initialize RCLCPP and spin the minimalPublisher node
-*
-* @param argc
-* @param argv
-*
-*/
-int main(int argc, char **argv)
-{
+ * @brief Returns the response based on request
+ *
+ * @param request Two strings: name, date
+ * @param response String: output
+ */
+void speak(const std::shared_ptr<cpp_pubsub::srv::Speak::Request> request,
+           std::shared_ptr<cpp_pubsub::srv::Speak::Response> response) {
+  response->output =
+      "Hi, my name is " + request->name + " and today is " + request->date;
 
+  RCLCPP_INFO(rclcpp::get_logger("rclcpp"),
+              "Incoming request by\nname: %s\nTimestamp is: %s",
+              request->name.c_str(), request->date.c_str());
+  // RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Sending back the generated
+  // response:   %s" << response->output << "]");
+  RCLCPP_INFO(rclcpp::get_logger("rclcpp"),
+              "Sending back the generated response: %s",
+              response->output.c_str());
+}
+
+/**
+ * @brief initialize RCLCPP and spin the minimalPublisher node
+ *
+ * @param argc
+ * @param argv
+ *
+ */
+int main(int argc, char **argv) {
   /**
-  * @brief Initialize the ROS2 CPP client library
-  */
+   * @brief Initialize the ROS2 CPP client library
+   */
   rclcpp::init(argc, argv);
 
+  /**
+   * @brief Initialize the server node
+   */
+  std::shared_ptr<rclcpp::Node> node =
+      rclcpp::Node::make_shared("reply_server");
 
   /**
-  * @brief Initialize the server node
-  */
-  std::shared_ptr<rclcpp::Node> node = rclcpp::Node::make_shared("reply_server");
-
-
-  /**
-  * @brief Designate the speak service as the service for the server node
-  */
+   * @brief Designate the speak service as the service for the server node
+   */
   rclcpp::Service<cpp_pubsub::srv::Speak>::SharedPtr service =
-    node->create_service<cpp_pubsub::srv::Speak>("speak", &speak);
+      node->create_service<cpp_pubsub::srv::Speak>("speak", &speak);
 
   RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Ready hear a name and date:.");
 
-
   /**
-  * @brief Spin the server node
-  */
+   * @brief Spin the server node
+   */
   rclcpp::spin(node);
   rclcpp::shutdown();
 }

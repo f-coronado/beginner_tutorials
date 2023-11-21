@@ -9,8 +9,8 @@
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
 
-// The above copyright notice and this permission notice shall be included in all
-// copies or substantial portions of the Software.
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
 
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -32,30 +32,30 @@
 
 #include <functional>
 #include <memory>
-#include "rclcpp/rclcpp.hpp"
 #include <cpp_pubsub/srv/speak.hpp>
 #include <std_msgs/msg/string.hpp>
+
+#include "rclcpp/rclcpp.hpp"
 
 using std::placeholders::_1;
 
 class MinimalSubscriber : public rclcpp::Node {
  public:
   /**
-  * @brief MinimalSubscriber node created to listen to talker/publisher
-  *
-  */
+   * @brief MinimalSubscriber node created to listen to talker/publisher
+   *
+   */
   MinimalSubscriber() : Node("minimal_subscriber") {
     subscription_ = this->create_subscription<std_msgs::msg::String>(
         "topic", 10, std::bind(&MinimalSubscriber::topic_callback, this, _1));
   }
 
  private:
-
   /**
-  * @brief calls the topic and retrieves the message
-  *
-  * @param msg
-  */
+   * @brief calls the topic and retrieves the message
+   *
+   * @param msg
+   */
   void topic_callback(const std_msgs::msg::String& msg) const {
     RCLCPP_INFO(this->get_logger(), "I heard: '%s'", msg.data.c_str());
   }

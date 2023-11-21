@@ -8,7 +8,7 @@ def generate_launch_description():
         Node(
             package='cpp_pubsub',
             executable='talker',
-            name='talker'
+            name='minimal_publisher'
         ),
         Node(
             package='cpp_pubsub',

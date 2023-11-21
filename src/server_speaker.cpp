@@ -19,6 +19,15 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
+/**
+* @file publisher_member_function.cpp
+* @author f-coronado
+* @brief Publisher script
+* @date 11/20/2023
+*
+* @copyright Copyright (c) 2023
+*
+*/
 
 #include <rclcpp/rclcpp.hpp>
 #include <cpp_pubsub/srv/speak.hpp>
@@ -42,35 +51,16 @@
     // RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Sending back the generated response:   %s" << response->output << "]");
     RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Sending back the generated response: %s", response->output.c_str());
 
-  // # create service callback function, show in logger
   };
 
-  /**
-  * @brief calls the response for the speak function
-  *
-  * @param response
-  */
-  // void response_cb(rclcpp::Client<cpp_pubsub::srv::Speak> response){
 
-  //   RCLCPP_INFO(this->get_logger(), "Name passed is: %s", response.get()->output.c_str());
-  //   Message = response.get()->output.c_str();
-
-  // };
-
-  // 
-  // int server_cb(){
-
-  //   auto request = std::make_shared<cpp_pubsub::srv::Speak::Request>();
-  //   request -> name;
-  //   request -> date;
-  //   // RCLCPP_INFO(this->get_logger(), "Modifying name using the server");
-  //   auto  cb_ptr = std::bind(&MinimalPublisher::response_cb, this, _1);
-  //   client -> async_send_request(request, cb_ptr);
-  //   return 1;
-
-  // }
-
-
+/**
+* @brief initialize RCLCPP and spin the minimalPublisher node
+*
+* @param argc
+* @param argv
+*
+*/
 int main(int argc, char **argv)
 {
 

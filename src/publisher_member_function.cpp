@@ -63,7 +63,7 @@ class MinimalPublisher : public rclcpp::Node {
       */
       parameter_monitor = std::make_shared<rclcpp::ParameterEventHandler>(this);
 
-      auto param_cb = std::bind(&MinimalPublisher::parameter_callback, this, _1);
+      auto param_cb = std::bind(&MinimalPublisher::param_callback, this, _1);
       param_handle_ = parameter_monitor->add_parameter_callback("name", param_cb);  
 
       // publisher items
@@ -78,16 +78,19 @@ class MinimalPublisher : public rclcpp::Node {
       while (!client_->wait_for_service(1s)) {
         if (!rclcpp::ok()) {
           RCLCPP_FATAL(rclcpp::get_logger("rclcpp"), "Interrupted");
+          RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Interrupted");
           exit(EXIT_FAILURE);
         }
         RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "Service unavailable");
       }
   };
-
-  // auto remote_node = std::string("talker");
-  // auto remote_param = std::string("");
   
   private:
+
+    // Members needed for publisher
+    rclcpp::TimerBase::SharedPtr timer_;
+    rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
+    size_t count_;
     // members needed for parameter
     std::shared_ptr<rclcpp::ParameterEventHandler> parameter_monitor;
     std::shared_ptr<rclcpp::ParameterCallbackHandle> param_handle_;
@@ -95,54 +98,64 @@ class MinimalPublisher : public rclcpp::Node {
     std::string Message;
 
 
+    /**
+    * @brief Checks the name parameter every 5s and outputs or publishes the corresponding message
+    *
+    */
     void timer_callback(){
-    
-      auto message = std_msgs::msg::String();
-      message.data =
-          "Hello, world! my name is Fabrizzio " + std::to_string(count_++);
-      RCLCPP_INFO(this->get_logger(), "Publishing: '%s'",
-                  message.data.c_str());
-      publisher_->publish(message);
-
+          
+      if (get_parameter("name").as_string()=="john"){
+        RCLCPP_ERROR(this->get_logger(), "Name passed is empty");
+        RCLCPP_FATAL(this->get_logger(), "Name not updated");
+      }
+      else{
+        auto message = std_msgs::msg::String();
+        message.data =
+            "Hello, world! my name is " + get_parameter("name").as_string() 
+            + " " + std::to_string(count_++);
+        RCLCPP_INFO(this->get_logger(), "Publishing: '%s'",
+                    message.data.c_str());
+        publisher_->publish(message);
+      };
       if (count_ % 10 == 0){
         call_change_parameter();
-      }
-    
+      };    
     };
 
-    // Members needed for publisher
-    rclcpp::TimerBase::SharedPtr timer_;
-    rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
-    size_t count_;
+    /**
+    * @brief Used by call_change_parameter to update the value of the parameter
+    *
+    * @param response_future
+    */
+    void response_cb(const rclcpp::Client<cpp_pubsub::srv::Speak>::SharedFuture response_future){
+      // Process the response
+      auto response = response_future.get();
+      RCLCPP_INFO(this->get_logger(), "Changed param: %s", response->output.c_str());
+    };
 
-
-    // think this may go into client script 
+    /**
+    * @brief Specifies service parameters and invokes the response
+    *
+    */
     int call_change_parameter(){
       auto request = std::make_shared<cpp_pubsub::srv::Speak::Request>();
       request->name = "name";
       request->date = "date";
       RCLCPP_INFO(this->get_logger(), "Updating parameter using call_change_parameter");
       auto param_change_cb =
-        std::bind(&MinimalPublisher::response_callback, this, _1);
+        std::bind(&MinimalPublisher::response_cb, this, _1);
       client_->async_send_request(request, param_change_cb);
       return 1;
-    };
-
-    void response_callback(const rclcpp::Client<cpp_pubsub::srv::Speak>::SharedFuture response_future){
-      // Process the response
-      auto response = response_future.get();
-      RCLCPP_INFO(this->get_logger(), "Changed param: %s", response->output.c_str());
-      Message = response->output.c_str();
     };
 
     /**
     * @brief parameter callback, updates the value of the parameter
     *
-    * @param my_param
+    * @param param
     */
-    void parameter_callback(const rclcpp::Parameter &param){
+    void param_callback(const rclcpp::Parameter &param){
       RCLCPP_INFO(this->get_logger(),
-        "parameter_callback: Received an update to name parameter");
+        "param_callback: Received an update to name parameter");
       RCLCPP_WARN(this->get_logger(), "The name parameter has been changed");
       timer_ = this->create_wall_timer (500ms, std::bind(&MinimalPublisher::timer_callback, this));
     }

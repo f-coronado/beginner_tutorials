@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <!-- MIT License
 
-Copyright (c) 2023 TommyChangUMD
+Copyright (c) 2023 f-coronado
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,7 @@ SOFTWARE. -->
   <version>0.0.0</version>
   <description>This project creates a simple publisher and subscriber</description>
   <maintainer email="fabrizzio37@gmail.com">fabrizzio</maintainer>
-  <license>Apache License 2.0</license>
+  <license>MIT</license>
   <buildtool_depend>ament_cmake</buildtool_depend>
   
   <depend>rclcpp</depend>

@@ -20,6 +20,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+/**
+* @file publisher_member_function.cpp
+* @author f-coronado
+* @brief Publisher script
+* @date 11/20/2023
+*
+* @copyright Copyright (c) 2023
+*
+*/
+
 #include <functional>
 #include <memory>
 #include "rclcpp/rclcpp.hpp"

@@ -29,10 +29,13 @@
 * @copyright Copyright (c) 2023
 *
 */
-
+#include <tf2_ros/static_transform_broadcaster.h>
+#include <tf2/LinearMath/Quaternion.h>
+#include <geometry_msgs/msg/transform_stamped.hpp>
 #include <memory>
 #include <string>
 #include <functional>
+#include <chrono>
 #include <rclcpp/time.hpp>
 #include "std_msgs/msg/string.hpp"
 #include <cpp_pubsub/srv/speak.hpp>
@@ -83,11 +86,21 @@ class MinimalPublisher : public rclcpp::Node {
       }
       RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "Service unavailable");
     }
+
+    tf_static_broadcaster_ = std::make_shared<tf2_ros::StaticTransformBroadcaster>(this);
+
+    // RCLCPP_INFO(this->get_logger(), "Initializing transformTimer");
+    // auto transformTimer = this->create_wall_timer(
+    //   3000ms, std::bind(&MinimalPublisher::transform_callback, this));
+    // RCLCPP_INFO(this->get_logger(), "transformTimer has been initialized");
+
+
   }
 
  private:
   // Members needed for publisher
   rclcpp::TimerBase::SharedPtr timer_;
+  rclcpp::TimerBase::SharedPtr transformTimer;
   rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
   size_t count_;
   // members needed for parameter
@@ -95,6 +108,9 @@ class MinimalPublisher : public rclcpp::Node {
   std::shared_ptr<rclcpp::ParameterCallbackHandle> param_handle_;
   rclcpp::Client<cpp_pubsub::srv::Speak>::SharedPtr client_;
   std::string Message;
+  // members needed for transform frame
+  std::shared_ptr<tf2_ros::StaticTransformBroadcaster> tf_static_broadcaster_;
+
 
   /**
    * @brief Checks the name parameter every 5s and outputs or publishes the
@@ -159,6 +175,26 @@ class MinimalPublisher : public rclcpp::Node {
     timer_ = this->create_wall_timer(
         500ms, std::bind(&MinimalPublisher::timer_callback, this));
   }
+
+  void transform_callback(){
+    geometry_msgs::msg::TransformStamped t;
+
+    RCLCPP_INFO(this->get_logger(), "Publishing transform...");
+    t.header.stamp = this->get_clock()->now();
+    t.header.frame_id = "world"; // parent frame
+    t.child_frame_id = "talk"; // child frame
+
+    t.transform.translation.x = 6.0;
+    t.transform.translation.y = 1.0;
+    t.transform.translation.z = 9.0;
+
+    t.transform.rotation.x = .12;
+    t.transform.rotation.y = .05;
+    t.transform.rotation.z = .003;
+    t.transform.rotation.w = 0.01;
+
+    tf_static_broadcaster_->sendTransform(t);
+  };
 };
 
 int main(int argc, char* argv[]) {

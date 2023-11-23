@@ -1,3 +1,10 @@
+"""
+@file bgeinner_tutorials.py
+@brief This launch file initiates the talker, listener and server nodes
+@date 11/20/2023
+@copyright Copyright (c) 2023
+"""
+
 from launch import LaunchDescription
 from launch_ros.actions import Node
 
@@ -20,16 +27,4 @@ def generate_launch_description():
             executable='server',
             name='server',
         )
-
-        # DeclareLaunchArgument(
-        #     "talker_rate",
-        #     default_value = "100",
-        #     description="talker rate"
-        # ),
-
-        # DeclareLaunchArgument(
-        #     "log_level",
-        #     default_value = TextSubstitution(text=str("info")),
-        #     description="Logging level"
-        # ),
     ])

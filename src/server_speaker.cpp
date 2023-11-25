@@ -1,24 +1,16 @@
-// MIT License
-
-// Copyright (c) 2023 f-coronado
-
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-// SOFTWARE.
+// Copyright 2016 Open Source Robotics Foundation, Inc.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 /**
  * @file server_speaker.cpp
  * @author f-coronado
@@ -40,19 +32,21 @@
  * @param request Two strings: name, date
  * @param response String: output
  */
-void speak(const std::shared_ptr<cpp_pubsub::srv::Speak::Request> request,
-           std::shared_ptr<cpp_pubsub::srv::Speak::Response> response) {
+void speak(
+  const std::shared_ptr<cpp_pubsub::srv::Speak::Request> request,
+  std::shared_ptr<cpp_pubsub::srv::Speak::Response> response)
+{
   response->output =
-      "Hi, my name is " + request->name + " and today is " + request->date;
+    "Hi, my name is " + request->name + " and today is " + request->date;
 
-  RCLCPP_INFO(rclcpp::get_logger("rclcpp"),
-              "Incoming request by\nname: %s\nTimestamp is: %s",
-              request->name.c_str(), request->date.c_str());
-  // RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Sending back the generated
-  // response:   %s" << response->output << "]");
-  RCLCPP_INFO(rclcpp::get_logger("rclcpp"),
-              "Sending back the generated response: %s",
-              response->output.c_str());
+  RCLCPP_INFO(
+    rclcpp::get_logger("rclcpp"),
+    "Request received by speak server",
+    request->name.c_str(), request->date.c_str());
+  RCLCPP_INFO(
+    rclcpp::get_logger("rclcpp"),
+    "Sending back the generated response: %s",
+    response->output.c_str());
 }
 
 /**
@@ -62,7 +56,8 @@ void speak(const std::shared_ptr<cpp_pubsub::srv::Speak::Request> request,
  * @param argv
  *
  */
-int main(int argc, char **argv) {
+int main(int argc, char ** argv)
+{
   /**
    * @brief Initialize the ROS2 CPP client library
    */
@@ -72,13 +67,13 @@ int main(int argc, char **argv) {
    * @brief Initialize the server node
    */
   std::shared_ptr<rclcpp::Node> node =
-      rclcpp::Node::make_shared("reply_server");
+    rclcpp::Node::make_shared("reply_server");
 
   /**
    * @brief Designate the speak service as the service for the server node
    */
   rclcpp::Service<cpp_pubsub::srv::Speak>::SharedPtr service =
-      node->create_service<cpp_pubsub::srv::Speak>("speak", &speak);
+    node->create_service<cpp_pubsub::srv::Speak>("speak", &speak);
 
   RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Ready hear a name and date:.");
 

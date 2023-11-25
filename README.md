@@ -55,7 +55,7 @@ ros2 param set /minimal_publisher name john
 
 ```
 
-Alternatively you can run the nodes independently
+Alternatively you can run the nodes independently, make sure to run the server node first because the talker node waits for it
 ```sh
 ros2 run cpp_pubsub server
 ```
@@ -64,6 +64,32 @@ ros2 run cpp_pubsub talker
 ```
 ```sh
 ros2 run cpp_pubsub listener
+```
+
+# Inspecting TF frames
+The publisher node sends the transform from the world to talk frame every 10s. In real time you can view the static transform being sent over using tf_ros executables.
+
+First launch beginner_tutorials.py
+```sh
+ros2 launch cpp_pubsub beginner_tutorials.py
+```
+Then use tf2_echo to view the frame sent from the source/world frame to target/talk frame
+```sh
+ros2 run tf2_ros tf2_echo world talk
+```
+Alternatively, you can use tf2_tools to create a diagram of frames being broadcasted by tf2 over ROS. 
+```sh
+ros2 run tf2_tools view_frames
+```
+
+# Running ROS test
+In your ros2 workspace, run the test
+```sh
+colcon test --packages-select cpp_pubsub 
+```
+View the results
+```sh
+cat log/latest_test/cpp_pubsub/stdout_stderr.log 
 ```
 
 # Recording and playing back bag file

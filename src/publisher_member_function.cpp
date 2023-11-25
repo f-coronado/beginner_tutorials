@@ -1,24 +1,16 @@
-// MIT License
-
-// Copyright (c) 2023 f-coronado
-
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-// SOFTWARE.
+// Copyright 2016 Open Source Robotics Foundation, Inc.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 
 /**
 * @file publisher_member_function.cpp
@@ -31,11 +23,11 @@
 */
 #include <tf2_ros/static_transform_broadcaster.h>
 #include <tf2/LinearMath/Quaternion.h>
-#include <geometry_msgs/msg/transform_stamped.hpp>
 #include <memory>
 #include <string>
 #include <functional>
-#include <chrono>
+#include <boost/chrono.hpp>
+#include <geometry_msgs/msg/transform_stamped.hpp>
 #include <rclcpp/time.hpp>
 #include "std_msgs/msg/string.hpp"
 #include <cpp_pubsub/srv/speak.hpp>
@@ -44,12 +36,15 @@
 using std::chrono_literals::operator""ms;
 using std::placeholders::_1;
 
-class MinimalPublisher : public rclcpp::Node {
- public:
+class MinimalPublisher : public rclcpp::Node
+{
+public:
   /**
    * @brief Create the minimal publisher
    */
-  MinimalPublisher() : Node("minimal_publisher"), count_(0) {
+  MinimalPublisher()
+  : Node("minimal_publisher"), count_(0)
+  {
     /**
      * @brief Define the descirption of the parameter
      */
@@ -74,7 +69,7 @@ class MinimalPublisher : public rclcpp::Node {
     publisher_ = this->create_publisher<std_msgs::msg::String>("topic", 10);
     RCLCPP_DEBUG(this->get_logger(), "Publisher has been initiated");
     timer_ = this->create_wall_timer(
-        500ms, std::bind(&MinimalPublisher::timer_callback, this));
+      500ms, std::bind(&MinimalPublisher::timer_callback, this));
 
     client_ = this->create_client<cpp_pubsub::srv::Speak>("speak");
     RCLCPP_DEBUG(this->get_logger(), "Client created");
@@ -87,17 +82,11 @@ class MinimalPublisher : public rclcpp::Node {
       RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "Service unavailable");
     }
 
-    // tf_static_broadcaster_ = std::make_shared<tf2_ros::StaticTransformBroadcaster>(this);
-
-    // RCLCPP_INFO(this->get_logger(), "Initializing transformTimer");
-    // auto transformTimer = this->create_wall_timer(
-    //   3000ms, std::bind(&MinimalPublisher::transform_callback, this));
-    // RCLCPP_INFO(this->get_logger(), "transformTimer has been initialized");
-
-
+    tf_static_broadcaster_ =
+      std::make_shared<tf2_ros::StaticTransformBroadcaster>(this);
   }
 
- private:
+private:
   // Members needed for publisher
   rclcpp::TimerBase::SharedPtr timer_;
   rclcpp::TimerBase::SharedPtr transformTimer;
@@ -117,7 +106,8 @@ class MinimalPublisher : public rclcpp::Node {
    * corresponding message
    *
    */
-  void timer_callback() {
+  void timer_callback()
+  {
     if (get_parameter("name").as_string() == "john") {
       RCLCPP_ERROR(this->get_logger(), "Name passed is invalid");
       RCLCPP_FATAL(this->get_logger(), "Name not updated");
@@ -125,13 +115,14 @@ class MinimalPublisher : public rclcpp::Node {
     } else {
       auto message = std_msgs::msg::String();
       message.data = "Hello, world! my name is " +
-                     get_parameter("name").as_string() + " " +
-                     std::to_string(count_++);
+        get_parameter("name").as_string() + " " +
+        std::to_string(count_++);
       RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", message.data.c_str());
       publisher_->publish(message);
     }
     if (count_ % 10 == 0) {
       call_change_parameter();
+      transform_callback();
     }
   }
 
@@ -140,24 +131,30 @@ class MinimalPublisher : public rclcpp::Node {
    *
    * @param response_future
    */
-  void response_cb(const rclcpp::Client<cpp_pubsub::srv::Speak>::SharedFuture
-                       response_future) {
+  void response_cb(
+    const rclcpp::Client<cpp_pubsub::srv::Speak>::SharedFuture
+    response_future)
+  {
     // Process the response
     auto response = response_future.get();
-    RCLCPP_INFO(this->get_logger(), "Changed param: %s",
-                response->output.c_str());
+    RCLCPP_INFO(
+      this->get_logger(),
+      "Changed param: %s",
+      response->output.c_str());
   }
 
   /**
    * @brief Specifies service parameters and invokes the response
    *
    */
-  int call_change_parameter() {
+  int call_change_parameter()
+  {
     auto request = std::make_shared<cpp_pubsub::srv::Speak::Request>();
     request->name = "name";
     request->date = "date";
-    RCLCPP_INFO(this->get_logger(),
-                "Updating parameter using call_change_parameter");
+    RCLCPP_INFO(
+      this->get_logger(),
+      "Checking for updated parameter..");
     auto param_change_cb = std::bind(&MinimalPublisher::response_cb, this, _1);
     client_->async_send_request(request, param_change_cb);
     return 1;
@@ -168,21 +165,28 @@ class MinimalPublisher : public rclcpp::Node {
    *
    * @param param
    */
-  void param_callback(const rclcpp::Parameter& param) {
-    RCLCPP_INFO(this->get_logger(),
-                "param_callback: Received an update to name parameter");
-    RCLCPP_WARN(this->get_logger(), "The name parameter has been changed");
+  int param_callback(const rclcpp::Parameter & param)
+  {
+    RCLCPP_INFO(
+      this->get_logger(),
+      "param_callback: Received an update to name parameter");
+    RCLCPP_WARN(
+      this->get_logger(),
+      "The name parameter has been changed");
     timer_ = this->create_wall_timer(
-        500ms, std::bind(&MinimalPublisher::timer_callback, this));
+      500ms, std::bind(&MinimalPublisher::timer_callback, this));
+
+    return 1;
   }
 
-  void transform_callback(){
+  void transform_callback()
+  {
     geometry_msgs::msg::TransformStamped t;
 
     RCLCPP_INFO(this->get_logger(), "Publishing transform...");
     t.header.stamp = this->get_clock()->now();
-    t.header.frame_id = "world"; // parent frame
-    t.child_frame_id = "talk"; // child frame
+    t.header.frame_id = "world";  // parent frame
+    t.child_frame_id = "talk";  // child frame
 
     t.transform.translation.x = 6.0;
     t.transform.translation.y = 1.0;
@@ -194,10 +198,12 @@ class MinimalPublisher : public rclcpp::Node {
     t.transform.rotation.w = 0.01;
 
     tf_static_broadcaster_->sendTransform(t);
-  };
+    RCLCPP_INFO(this->get_logger(), "Transform published!");
+  }
 };
 
-int main(int argc, char* argv[]) {
+int main(int argc, char * argv[])
+{
   rclcpp::init(argc, argv);
   rclcpp::spin(std::make_shared<MinimalPublisher>());
   rclcpp::shutdown();

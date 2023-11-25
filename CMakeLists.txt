@@ -26,7 +26,7 @@ include(GoogleTest)
 set(THIS_PACKAGE_INCLUDE_DEPENDS
   rclcpp
   std_msgs
-  )
+)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/Speak.srv"
@@ -80,6 +80,10 @@ install(DIRECTORY launch
 if(BUILD_TESTING)
   find_package(ament_cmake_gtest REQUIRED)
   find_package(ament_lint_auto REQUIRED)
+
+  # exclude the following tests when running colcon-test
+  set(ament_cmake_copyright_FOUND TRUE)
+  set(ament_cmake_cpplint_FOUND TRUE)
 
   ament_lint_auto_find_test_dependencies()
 

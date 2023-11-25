@@ -5,6 +5,7 @@
 #add_executable(simple-gtest simple_test.cpp)
 #ament_target_dependencies(simple-gtest std_msgs rclcpp)
 
+#rosidl_target_interfaces(simple-gtest ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
 #target_include_directories(simple-gtest PUBLIC
 #  ${CMAKE_SOURCE_DIR}/include

@@ -87,7 +87,7 @@ class MinimalPublisher : public rclcpp::Node {
       RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "Service unavailable");
     }
 
-    tf_static_broadcaster_ = std::make_shared<tf2_ros::StaticTransformBroadcaster>(this);
+    // tf_static_broadcaster_ = std::make_shared<tf2_ros::StaticTransformBroadcaster>(this);
 
     // RCLCPP_INFO(this->get_logger(), "Initializing transformTimer");
     // auto transformTimer = this->create_wall_timer(

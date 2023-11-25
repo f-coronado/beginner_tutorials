@@ -34,6 +34,7 @@
 #include <stdlib.h>
 #include "std_msgs/msg/string.hpp"
 #include "rclcpp/rclcpp.hpp"
+#include <chrono>
 #include <cpp_pubsub/msg/message.hpp>
 
 class TaskPlanningFixture : public testing::Test {
@@ -120,10 +121,10 @@ TEST_F(TaskPlanningFixture, TrueIsTrueTest) {
   ("message", 10,
      // Lambda expression begins
      [&](const cpp_pubsub::msg::Message& msg) {
-       RCLCPP_INFO(node_->get_logger(), "I heard: '%s'", msg.data.c_str());
+       RCLCPP_INFO(node_->get_logger(), "I heard: '%s'", msg.response.c_str());
        hasData = true;
      } // end of lambda expression
-     )
+     );
 
   /*
    * 3.) check to see if we get data winhin 3 sec

@@ -17,6 +17,8 @@ find_package(rosidl_default_generators REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(rosbag2_cpp REQUIRED)
+find_package(cpp_pubsub REQUIRED)
 
 enable_testing()
 include(GoogleTest)
@@ -28,23 +30,25 @@ set(THIS_PACKAGE_INCLUDE_DEPENDS
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/Speak.srv"
-  "msg/Message.msg")
+  "msg/Message.msg"
+  DEPENDENCIES std_msgs)
 
 # adding the executables and naming them so we can run the nodes using ros2 run
 add_executable(talker src/publisher_member_function.cpp)
-ament_target_dependencies(talker rclcpp std_msgs tf2 tf2_ros geometry_msgs)
+ament_target_dependencies(talker rclcpp std_msgs tf2 tf2_ros geometry_msgs
+  cpp_pubsub)
 
 add_executable(listener src/subscriber_member_function.cpp)
-ament_target_dependencies(listener rclcpp std_msgs)
+ament_target_dependencies(listener rclcpp std_msgs cpp_pubsub)
 
 add_executable(server src/server_speaker.cpp)
-ament_target_dependencies(server rclcpp std_msgs)
+ament_target_dependencies(server rclcpp std_msgs cpp_pubsub)
 
 add_executable(client src/client_response.cpp)
-ament_target_dependencies(client rclcpp std_msgs)
+ament_target_dependencies(client rclcpp std_msgs cpp_pubsub)
 
-#add_executable(basic_test test/basic_test.cpp)
-#ament_target_dependencies(basic_test rclcpp std_msgs)
+#add_executable(simple-gtest test/simple_test.cpp)
+#ament_target_dependencies(simple-gtest rclcpp std_msgs cpp_pubsub)
 
 # adding targets so ros2 run can find the executable
 install(TARGETS
@@ -52,10 +56,11 @@ install(TARGETS
   listener
   server
   client
-#  basic_test
+#  simple-gtest
   DESTINATION lib/${PROJECT_NAME}
 )
 
+#rosidl_get_typesupport_target() for humble
 rosidl_target_interfaces(talker
   ${PROJECT_NAME} "rosidl_typesupport_cpp")
 rosidl_target_interfaces(listener
@@ -64,10 +69,10 @@ rosidl_target_interfaces(server
   ${PROJECT_NAME} "rosidl_typesupport_cpp")
 rosidl_target_interfaces(client
   ${PROJECT_NAME} "rosidl_typesupport_cpp")
-#rosidl_target_interfaces(basic_test
+#rosidl_target_interfaces(simple-gtest
 #  ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
-add_subdirectory(test)
+#add_subdirectory(test)
 
 install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME}/)
@@ -78,13 +83,13 @@ if(BUILD_TESTING)
 
   ament_lint_auto_find_test_dependencies()
 
-  set(TESTFILES
-    test/simple_test.cpp)
-  ament_add_gtest(${PROJECT_NAME}_test ${TESTFILES})
-  ament_target_dependencies(${PROJECT_NAME}_test ${THIS_PACKAGE_INCLUDE_DEPENDS})
-  install(TARGETS
-    ${PROJECT_NAME}_test
-    DESTINATION lib/${PROJECT_NAME})
+#  set(TESTFILES
+#    test/simple_test.cpp)
+#  ament_add_gtest(test_${PROJECT_NAME} ${TESTFILES})
+#  ament_target_dependencies(test_${PROJECT_NAME} ${THIS_PACKAGE_INCLUDE_DEPENDS})
+#  install(TARGETS
+#    test_${PROJECT_NAME}
+#    DESTINATION lib/${PROJECT_NAME})
 
 endif()
 

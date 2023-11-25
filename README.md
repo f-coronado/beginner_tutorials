@@ -35,9 +35,9 @@ Run the subscriber on another terminal
 ros2 run cpp_pubsub listener
 ```
 
-Ctrl+C to end the script
-# Examples of how to use launch file and run nodes
-Launching the publisher, subscriber and server nodes from ros2_ws
+Ctrl+C to end the scripts
+# Running nodes and setting parameter
+Launching the publisher, subscriber and server nodes from ros2_ws using a launch file
 ```sh
 ros2 launch cpp_pubsub_beginner_tutorials.py
 ```
@@ -64,6 +64,25 @@ ros2 run cpp_pubsub talker
 ```
 ```sh
 ros2 run cpp_pubsub listener
+```
+
+# Recording and playing back bag file
+Use bag_record launch file to run nodes and record automatically
+```sh
+ros2 launch cpp_pubsub bag_record.py bag_record:=true bag_filepath:=results
+```
+You can also play back a prerecorded bag file and view it in realtime, First launch listener node.
+```sh
+ros2 run cpp_pubsub listener
+```
+Then in a new terminal, navigate to bag recording folder and play the bag file
+```sh
+cd ~/your_ros2_workspace/src/cpp_pubsub/results/bag_recordings/
+ros2 bag play bag_recordings_0.db3
+```
+You should see the listener print messages from the bag. You can see more information about the bag recording using the following
+```sh
+ros2 bag info bag_recordings_0.db3 
 ```
 
 ## Assumptions and Dependencies

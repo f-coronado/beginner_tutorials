@@ -29,8 +29,7 @@
 
 using std::chrono_literals::operator""ms;
 
-int main(int argc, char ** argv)
-{
+int main(int argc, char ** argv) {
   rclcpp::init(argc, argv);
 
   if (argc != 3) {
@@ -72,8 +71,7 @@ int main(int argc, char ** argv)
   auto result = client->async_send_request(request);
   // Wait for the result.
   if (rclcpp::spin_until_future_complete(node, result) ==
-    rclcpp::FutureReturnCode::SUCCESS)
-  {
+    rclcpp::FutureReturnCode::SUCCESS) {
     RCLCPP_INFO(
       rclcpp::get_logger("rclcpp"), "Response: %s",
       result.get()->output.c_str());

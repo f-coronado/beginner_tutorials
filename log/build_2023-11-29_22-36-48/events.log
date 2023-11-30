@@ -1,0 +1,545 @@
+[0.000000] (-) TimerEvent: {}
+[0.000117] (cpp_pubsub) JobQueued: {'identifier': 'cpp_pubsub', 'dependencies': OrderedDict()}
+[0.000147] (cpp_pubsub) JobStarted: {'identifier': 'cpp_pubsub'}
+[0.099800] (-) TimerEvent: {}
+[0.200711] (-) TimerEvent: {}
+[0.301048] (-) TimerEvent: {}
+[0.349590] (cpp_pubsub) JobProgress: {'identifier': 'cpp_pubsub', 'progress': 'cmake'}
+[0.350156] (cpp_pubsub) Command: {'cmd': ['/usr/bin/cmake', '/home/fabrizzio/ros2_ws/src/cpp_pubsub', '-DCMAKE_INSTALL_PREFIX=/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub'], 'cwd': '/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fabrizzio'), ('SSH_AGENT_PID', '1997'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/snap/code/146/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/fabrizzio/ros2_ws/install/gazebo_ros/lib:/home/fabrizzio/ros2_ws/install/gazebo_msgs/lib:/home/fabrizzio/ros2_ws/install/cpp_pubsub/lib:/home/fabrizzio/catkin_ws/devel/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/fabrizzio'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('TERM_PROGRAM_VERSION', '1.84.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/snap/code/146/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/snap/code/146/usr/share/code/code'), ('MANAGERPID', '1821'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3453'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/fabrizzio/ros2_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'fabrizzio'), ('JOURNAL_STREAM', '8:53375'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('PKG_CONFIG_PATH', '/home/fabrizzio/catkin_ws/devel/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('XDG_DATA_DIRS_VSCODE_SNAP_ORIG', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('USERNAME', 'fabrizzio'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/home/fabrizzio/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/lenovo:@/tmp/.ICE-unix/2035,unix/lenovo:/tmp/.ICE-unix/2035'), ('INVOCATION_ID', 'fb73c1fc12f7492b8bfd4d450690f6da'), ('XDG_MENU_PREFIX', 'gnome-'), ('BAMF_DESKTOP_FILE_HINT', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-78e9740a7d.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/fabrizzio/ros2_ws/install/walker_808x:/home/fabrizzio/ros2_ws/install/gazebo_ros_pkgs:/home/fabrizzio/ros2_ws/install/gazebo_ros:/home/fabrizzio/ros2_ws/install/gazebo_msgs:/home/fabrizzio/ros2_ws/install/cpp_pubsub:/opt/ros/galactic'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('ROS_MASTER_URI', 'http://localhost:11311'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/fabrizzio/ros2_ws/install/gazebo_ros/lib/python3.8/site-packages:/home/fabrizzio/ros2_ws/install/gazebo_msgs/lib/python3.8/site-packages:/home/fabrizzio/ros2_ws/install/cpp_pubsub/lib/python3.8/site-packages:/home/fabrizzio/catkin_ws/devel/lib/python3/dist-packages:/opt/ros/galactic/lib/python3.8/site-packages::/usr/lib/python3/dist-packages'), ('ROS_HOSTNAME', 'localhost'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/fabrizzio/ros2_ws/install/walker_808x:/home/fabrizzio/ros2_ws/install/gazebo_ros_pkgs:/home/fabrizzio/ros2_ws/install/gazebo_ros:/home/fabrizzio/ros2_ws/install/gazebo_msgs:/home/fabrizzio/ros2_ws/install/gazebo_dev:/home/fabrizzio/ros2_ws/install/cpp_pubsub:/opt/ros/galactic:/home/fabrizzio/catkin_ws/devel')]), 'shell': False}
+[0.401266] (-) TimerEvent: {}
+[0.424599] (cpp_pubsub) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.491326] (cpp_pubsub) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.496137] (cpp_pubsub) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.501290] (-) TimerEvent: {}
+[0.580737] (cpp_pubsub) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.581725] (cpp_pubsub) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.601440] (-) TimerEvent: {}
+[0.669565] (cpp_pubsub) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.683604] (cpp_pubsub) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.684062] (cpp_pubsub) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.686971] (cpp_pubsub) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.701562] (-) TimerEvent: {}
+[0.787851] (cpp_pubsub) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.789542] (cpp_pubsub) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.801704] (-) TimerEvent: {}
+[0.890723] (cpp_pubsub) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.901816] (-) TimerEvent: {}
+[0.904713] (cpp_pubsub) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.905220] (cpp_pubsub) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.908493] (cpp_pubsub) StdoutLine: {'line': b'-- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)\n'}
+[0.943585] (cpp_pubsub) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.943796] (cpp_pubsub) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.001930] (-) TimerEvent: {}
+[1.040094] (cpp_pubsub) StdoutLine: {'line': b'-- Found rclcpp: 9.2.2 (/opt/ros/galactic/share/rclcpp/cmake)\n'}
+[1.097734] (cpp_pubsub) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.102042] (-) TimerEvent: {}
+[1.105769] (cpp_pubsub) StdoutLine: {'line': b'-- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)\n'}
+[1.202199] (-) TimerEvent: {}
+[1.221344] (cpp_pubsub) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[1.257344] (cpp_pubsub) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/galactic/include  \n'}
+[1.302298] (-) TimerEvent: {}
+[1.348008] (cpp_pubsub) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.402444] (-) TimerEvent: {}
+[1.414738] (cpp_pubsub) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)\n'}
+[1.419805] (cpp_pubsub) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 0.22.6 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)\n'}
+[1.443174] (cpp_pubsub) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[1.444069] (cpp_pubsub) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.502598] (-) TimerEvent: {}
+[1.530863] (cpp_pubsub) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.531265] (cpp_pubsub) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.602744] (-) TimerEvent: {}
+[1.625952] (cpp_pubsub) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[1.626240] (cpp_pubsub) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[1.702833] (cpp_pubsub) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[1.703058] (-) TimerEvent: {}
+[1.703280] (cpp_pubsub) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[1.793011] (cpp_pubsub) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[1.794404] (cpp_pubsub) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.803194] (-) TimerEvent: {}
+[1.903487] (-) TimerEvent: {}
+[1.965942] (cpp_pubsub) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.1.1 (/opt/ros/galactic/share/rosidl_default_generators/cmake)\n'}
+[1.979525] (cpp_pubsub) StdoutLine: {'line': b'-- Found tf2: 0.17.5 (/opt/ros/galactic/share/tf2/cmake)\n'}
+[2.003600] (-) TimerEvent: {}
+[2.032877] (cpp_pubsub) StdoutLine: {'line': b'-- Found tf2_ros: 0.17.5 (/opt/ros/galactic/share/tf2_ros/cmake)\n'}
+[2.103753] (-) TimerEvent: {}
+[2.204086] (-) TimerEvent: {}
+[2.304365] (-) TimerEvent: {}
+[2.405006] (-) TimerEvent: {}
+[2.423090] (cpp_pubsub) StdoutLine: {'line': b'-- Found rosbag2_cpp: 0.9.2 (/opt/ros/galactic/share/rosbag2_cpp/cmake)\n'}
+[2.478401] (cpp_pubsub) StdoutLine: {'line': b'-- Found cpp_pubsub: 1.3.0 (/home/fabrizzio/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/cmake)\n'}
+[2.505084] (-) TimerEvent: {}
+[2.544828] (cpp_pubsub) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[2.605206] (-) TimerEvent: {}
+[2.705453] (-) TimerEvent: {}
+[2.724342] (cpp_pubsub) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/galactic/share/ament_cmake_ros/cmake)\n'}
+[2.805565] (-) TimerEvent: {}
+[2.905911] (-) TimerEvent: {}
+[2.930838] (cpp_pubsub) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.994896] (cpp_pubsub) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.006075] (-) TimerEvent: {}
+[3.027313] (cpp_pubsub) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[3.029337] (cpp_pubsub) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/galactic/share/python_cmake_module/cmake)\n'}
+[3.065844] (cpp_pubsub) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[3.066095] (cpp_pubsub) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.066199] (cpp_pubsub) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[3.066305] (cpp_pubsub) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[3.092498] (cpp_pubsub) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[3.106194] (-) TimerEvent: {}
+[3.206543] (-) TimerEvent: {}
+[3.306828] (-) TimerEvent: {}
+[3.407089] (-) TimerEvent: {}
+[3.410571] (cpp_pubsub) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.10.7 (/opt/ros/galactic/share/ament_lint_auto/cmake)\n'}
+[3.468808] (cpp_pubsub) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[3.470789] (cpp_pubsub) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub/rosidl_generator_c>;/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub/rosidl_generator_c;/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub/rosidl_generator_cpp;/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub/rosidl_typesupport_fastrtps_c;/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub/rosidl_typesupport_fastrtps_cpp;$<BUILD_INTERFACE:/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub/rosidl_typesupport_introspection_c>;$<BUILD_INTERFACE:/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub/rosidl_typesupport_c>;$<BUILD_INTERFACE:/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub/rosidl_generator_cpp>;/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub/rosidl_generator_py\n'}
+[3.470922] (cpp_pubsub) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[3.475184] (cpp_pubsub) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[3.483225] (cpp_pubsub) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.487308] (cpp_pubsub) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[3.507192] (-) TimerEvent: {}
+[3.519267] (cpp_pubsub) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[3.519426] (cpp_pubsub) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[3.524095] (cpp_pubsub) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[3.530918] (cpp_pubsub) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.555607] (cpp_pubsub) StderrLine: {'line': b'CMake Warning at CMakeLists.txt:47 (add_executable):\n'}
+[3.555791] (cpp_pubsub) StderrLine: {'line': b'  Cannot generate a safe runtime search path for target listener because\n'}
+[3.555876] (cpp_pubsub) StderrLine: {'line': b'  there is a cycle in the constraint graph:\n'}
+[3.555936] (cpp_pubsub) StderrLine: {'line': b'\n'}
+[3.555992] (cpp_pubsub) StderrLine: {'line': b'    dir 0 is [/home/fabrizzio/ros2_ws/install/cpp_pubsub/lib]\n'}
+[3.556048] (cpp_pubsub) StderrLine: {'line': b'      dir 2 must precede it due to runtime library [libcpp_pubsub__rosidl_typesupport_cpp.so]\n'}
+[3.556103] (cpp_pubsub) StderrLine: {'line': b'    dir 1 is [/opt/ros/galactic/lib]\n'}
+[3.556157] (cpp_pubsub) StderrLine: {'line': b'    dir 2 is [/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub]\n'}
+[3.556211] (cpp_pubsub) StderrLine: {'line': b'      dir 0 must precede it due to runtime library [libcpp_pubsub__rosidl_typesupport_introspection_c.so]\n'}
+[3.556271] (cpp_pubsub) StderrLine: {'line': b'    dir 3 is [/opt/ros/galactic/lib/x86_64-linux-gnu]\n'}
+[3.556326] (cpp_pubsub) StderrLine: {'line': b'\n'}
+[3.556379] (cpp_pubsub) StderrLine: {'line': b'  Some of these libraries may not be found correctly.\n'}
+[3.556448] (cpp_pubsub) StderrLine: {'line': b'\n'}
+[3.556503] (cpp_pubsub) StderrLine: {'line': b'\n'}
+[3.607349] (-) TimerEvent: {}
+[3.613117] (cpp_pubsub) StdoutLine: {'line': b'-- Generating done\n'}
+[3.618725] (cpp_pubsub) StdoutLine: {'line': b'-- Build files have been written to: /home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub\n'}
+[3.631964] (cpp_pubsub) CommandEnded: {'returncode': 0}
+[3.633262] (cpp_pubsub) JobProgress: {'identifier': 'cpp_pubsub', 'progress': 'build'}
+[3.634448] (cpp_pubsub) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub', '--', '-j8', '-l8'], 'cwd': '/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fabrizzio'), ('SSH_AGENT_PID', '1997'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/snap/code/146/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/fabrizzio/ros2_ws/install/gazebo_ros/lib:/home/fabrizzio/ros2_ws/install/gazebo_msgs/lib:/home/fabrizzio/ros2_ws/install/cpp_pubsub/lib:/home/fabrizzio/catkin_ws/devel/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/fabrizzio'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('TERM_PROGRAM_VERSION', '1.84.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/snap/code/146/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/snap/code/146/usr/share/code/code'), ('MANAGERPID', '1821'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3453'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/fabrizzio/ros2_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'fabrizzio'), ('JOURNAL_STREAM', '8:53375'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('PKG_CONFIG_PATH', '/home/fabrizzio/catkin_ws/devel/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('XDG_DATA_DIRS_VSCODE_SNAP_ORIG', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('USERNAME', 'fabrizzio'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/home/fabrizzio/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/lenovo:@/tmp/.ICE-unix/2035,unix/lenovo:/tmp/.ICE-unix/2035'), ('INVOCATION_ID', 'fb73c1fc12f7492b8bfd4d450690f6da'), ('XDG_MENU_PREFIX', 'gnome-'), ('BAMF_DESKTOP_FILE_HINT', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-78e9740a7d.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/fabrizzio/ros2_ws/install/walker_808x:/home/fabrizzio/ros2_ws/install/gazebo_ros_pkgs:/home/fabrizzio/ros2_ws/install/gazebo_ros:/home/fabrizzio/ros2_ws/install/gazebo_msgs:/home/fabrizzio/ros2_ws/install/cpp_pubsub:/opt/ros/galactic'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('ROS_MASTER_URI', 'http://localhost:11311'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/fabrizzio/ros2_ws/install/gazebo_ros/lib/python3.8/site-packages:/home/fabrizzio/ros2_ws/install/gazebo_msgs/lib/python3.8/site-packages:/home/fabrizzio/ros2_ws/install/cpp_pubsub/lib/python3.8/site-packages:/home/fabrizzio/catkin_ws/devel/lib/python3/dist-packages:/opt/ros/galactic/lib/python3.8/site-packages::/usr/lib/python3/dist-packages'), ('ROS_HOSTNAME', 'localhost'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/fabrizzio/ros2_ws/install/walker_808x:/home/fabrizzio/ros2_ws/install/gazebo_ros_pkgs:/home/fabrizzio/ros2_ws/install/gazebo_ros:/home/fabrizzio/ros2_ws/install/gazebo_msgs:/home/fabrizzio/ros2_ws/install/gazebo_dev:/home/fabrizzio/ros2_ws/install/cpp_pubsub:/opt/ros/galactic:/home/fabrizzio/catkin_ws/devel')]), 'shell': False}
+[3.693852] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target cpp_pubsub__cpp\x1b[0m\n'}
+[3.694203] (cpp_pubsub) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[3.707473] (-) TimerEvent: {}
+[3.708347] (cpp_pubsub) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[3.807610] (-) TimerEvent: {}
+[3.907944] (-) TimerEvent: {}
+[4.008205] (-) TimerEvent: {}
+[4.043347] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target cpp_pubsub__rosidl_generator_c\x1b[0m\n'}
+[4.067272] (cpp_pubsub) StdoutLine: {'line': b'[  4%] Built target cpp_pubsub__cpp\n'}
+[4.069910] (cpp_pubsub) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/cpp_pubsub__rosidl_generator_c.dir/rosidl_generator_c/cpp_pubsub/srv/detail/speak__functions.c.o\x1b[0m\n'}
+[4.070511] (cpp_pubsub) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/cpp_pubsub__rosidl_generator_c.dir/rosidl_generator_c/cpp_pubsub/msg/detail/message__functions.c.o\x1b[0m\n'}
+[4.081226] (cpp_pubsub) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[4.082157] (cpp_pubsub) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[4.085095] (cpp_pubsub) StdoutLine: {'line': b'[ 14%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.108298] (-) TimerEvent: {}
+[4.158719] (cpp_pubsub) StdoutLine: {'line': b'[ 17%] \x1b[32m\x1b[1mLinking C shared library libcpp_pubsub__rosidl_generator_c.so\x1b[0m\n'}
+[4.204743] (cpp_pubsub) StdoutLine: {'line': b'[ 17%] Built target cpp_pubsub__rosidl_generator_c\n'}
+[4.208387] (-) TimerEvent: {}
+[4.219612] (cpp_pubsub) StdoutLine: {'line': b'[ 19%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[4.221652] (cpp_pubsub) StdoutLine: {'line': b'[ 21%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[4.308484] (-) TimerEvent: {}
+[4.391870] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target cpp_pubsub__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[4.398911] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target cpp_pubsub__rosidl_typesupport_cpp\x1b[0m\n'}
+[4.408586] (-) TimerEvent: {}
+[4.413820] (cpp_pubsub) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/cpp_pubsub__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cpp_pubsub/srv/detail/speak__type_support.cpp.o\x1b[0m\n'}
+[4.414755] (cpp_pubsub) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/cpp_pubsub__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cpp_pubsub/msg/detail/message__type_support.cpp.o\x1b[0m\n'}
+[4.420518] (cpp_pubsub) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/cpp_pubsub__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cpp_pubsub/srv/speak__type_support.cpp.o\x1b[0m\n'}
+[4.420904] (cpp_pubsub) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/cpp_pubsub__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cpp_pubsub/msg/message__type_support.cpp.o\x1b[0m\n'}
+[4.500997] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target cpp_pubsub__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[4.508751] (-) TimerEvent: {}
+[4.549968] (cpp_pubsub) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/cpp_pubsub__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cpp_pubsub/msg/detail/dds_fastrtps/message__type_support.cpp.o\x1b[0m\n'}
+[4.565735] (cpp_pubsub) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/cpp_pubsub__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cpp_pubsub/srv/detail/dds_fastrtps/speak__type_support.cpp.o\x1b[0m\n'}
+[4.608848] (-) TimerEvent: {}
+[4.664503] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target cpp_pubsub__rosidl_typesupport_c\x1b[0m\n'}
+[4.691605] (cpp_pubsub) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/cpp_pubsub__rosidl_typesupport_c.dir/rosidl_typesupport_c/cpp_pubsub/srv/speak__type_support.cpp.o\x1b[0m\n'}
+[4.708980] (-) TimerEvent: {}
+[4.760952] (cpp_pubsub) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/cpp_pubsub__rosidl_typesupport_c.dir/rosidl_typesupport_c/cpp_pubsub/msg/message__type_support.cpp.o\x1b[0m\n'}
+[4.789025] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target cpp_pubsub__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[4.809106] (-) TimerEvent: {}
+[4.821859] (cpp_pubsub) StdoutLine: {'line': b'[ 40%] \x1b[32m\x1b[1mLinking CXX shared library libcpp_pubsub__rosidl_typesupport_c.so\x1b[0m\n'}
+[4.844881] (cpp_pubsub) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding C object CMakeFiles/cpp_pubsub__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cpp_pubsub/srv/detail/speak__type_support.c.o\x1b[0m\n'}
+[4.909219] (-) TimerEvent: {}
+[4.917214] (cpp_pubsub) StdoutLine: {'line': b'[ 42%] Built target cpp_pubsub__rosidl_typesupport_c\n'}
+[4.920209] (cpp_pubsub) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding C object CMakeFiles/cpp_pubsub__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cpp_pubsub/msg/detail/message__type_support.c.o\x1b[0m\n'}
+[4.977873] (cpp_pubsub) StdoutLine: {'line': b'[ 46%] \x1b[32m\x1b[1mLinking CXX shared library libcpp_pubsub__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[4.987619] (cpp_pubsub) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libcpp_pubsub__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[4.991986] (cpp_pubsub) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking C shared library libcpp_pubsub__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[5.009353] (-) TimerEvent: {}
+[5.040502] (cpp_pubsub) StdoutLine: {'line': b'[ 51%] Built target cpp_pubsub__rosidl_typesupport_cpp\n'}
+[5.056809] (cpp_pubsub) StdoutLine: {'line': b'[ 51%] Built target cpp_pubsub__rosidl_typesupport_introspection_c\n'}
+[5.099479] (cpp_pubsub) StdoutLine: {'line': b'[ 51%] Built target cpp_pubsub__rosidl_typesupport_introspection_cpp\n'}
+[5.109473] (-) TimerEvent: {}
+[5.209799] (-) TimerEvent: {}
+[5.252188] (cpp_pubsub) StdoutLine: {'line': b'[ 53%] \x1b[32m\x1b[1mLinking CXX shared library libcpp_pubsub__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[5.309965] (-) TimerEvent: {}
+[5.363881] (cpp_pubsub) StdoutLine: {'line': b'[ 53%] Built target cpp_pubsub__rosidl_typesupport_fastrtps_cpp\n'}
+[5.378774] (cpp_pubsub) StdoutLine: {'line': b'[ 55%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[5.410102] (-) TimerEvent: {}
+[5.510344] (-) TimerEvent: {}
+[5.610660] (-) TimerEvent: {}
+[5.673048] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target cpp_pubsub__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[5.696952] (cpp_pubsub) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/cpp_pubsub__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cpp_pubsub/srv/detail/speak__type_support_c.cpp.o\x1b[0m\n'}
+[5.697260] (cpp_pubsub) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/cpp_pubsub__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cpp_pubsub/msg/detail/message__type_support_c.cpp.o\x1b[0m\n'}
+[5.710782] (-) TimerEvent: {}
+[5.811114] (-) TimerEvent: {}
+[5.911460] (-) TimerEvent: {}
+[6.011809] (-) TimerEvent: {}
+[6.095146] (cpp_pubsub) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libcpp_pubsub__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[6.111951] (-) TimerEvent: {}
+[6.206810] (cpp_pubsub) StdoutLine: {'line': b'[ 61%] Built target cpp_pubsub__rosidl_typesupport_fastrtps_c\n'}
+[6.212063] (-) TimerEvent: {}
+[6.220430] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target cpp_pubsub\x1b[0m\n'}
+[6.236015] (cpp_pubsub) StdoutLine: {'line': b'[ 61%] Built target cpp_pubsub\n'}
+[6.252254] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target cpp_pubsub__py\x1b[0m\n'}
+[6.252521] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target client\x1b[0m\n'}
+[6.252664] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target talker\x1b[0m\n'}
+[6.255656] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target server\x1b[0m\n'}
+[6.256728] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target listener\x1b[0m\n'}
+[6.268352] (cpp_pubsub) StdoutLine: {'line': b'[ 63%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[6.307742] (cpp_pubsub) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/client.dir/src/client_response.cpp.o\x1b[0m\n'}
+[6.312161] (-) TimerEvent: {}
+[6.316945] (cpp_pubsub) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o\x1b[0m\n'}
+[6.330260] (cpp_pubsub) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/server.dir/src/server_speaker.cpp.o\x1b[0m\n'}
+[6.332756] (cpp_pubsub) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/listener.dir/src/subscriber_member_function.cpp.o\x1b[0m\n'}
+[6.412267] (-) TimerEvent: {}
+[6.512603] (-) TimerEvent: {}
+[6.612959] (-) TimerEvent: {}
+[6.713284] (-) TimerEvent: {}
+[6.813619] (-) TimerEvent: {}
+[6.913947] (-) TimerEvent: {}
+[7.014274] (-) TimerEvent: {}
+[7.114644] (-) TimerEvent: {}
+[7.198677] (cpp_pubsub) StdoutLine: {'line': b'[ 72%] Built target cpp_pubsub__py\n'}
+[7.214763] (-) TimerEvent: {}
+[7.217306] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target cpp_pubsub__python\x1b[0m\n'}
+[7.263116] (cpp_pubsub) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding C object CMakeFiles/cpp_pubsub__python.dir/rosidl_generator_py/cpp_pubsub/srv/_speak_s.c.o\x1b[0m\n'}
+[7.267473] (cpp_pubsub) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding C object CMakeFiles/cpp_pubsub__python.dir/rosidl_generator_py/cpp_pubsub/msg/_message_s.c.o\x1b[0m\n'}
+[7.314875] (-) TimerEvent: {}
+[7.415545] (-) TimerEvent: {}
+[7.480518] (cpp_pubsub) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/cpp_pubsub/libcpp_pubsub__python.so\x1b[0m\n'}
+[7.515661] (-) TimerEvent: {}
+[7.583506] (cpp_pubsub) StdoutLine: {'line': b'[ 78%] Built target cpp_pubsub__python\n'}
+[7.607487] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target cpp_pubsub__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[7.615773] (-) TimerEvent: {}
+[7.631643] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target cpp_pubsub__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[7.663022] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target cpp_pubsub__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[7.679506] (cpp_pubsub) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding C object CMakeFiles/cpp_pubsub__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/cpp_pubsub/_cpp_pubsub_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[7.703411] (cpp_pubsub) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/cpp_pubsub__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/cpp_pubsub/_cpp_pubsub_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[7.715887] (-) TimerEvent: {}
+[7.759388] (cpp_pubsub) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/cpp_pubsub__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/cpp_pubsub/_cpp_pubsub_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[7.815998] (-) TimerEvent: {}
+[7.904487] (cpp_pubsub) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/cpp_pubsub/cpp_pubsub_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[7.916102] (-) TimerEvent: {}
+[7.933313] (cpp_pubsub) StdoutLine: {'line': b'[ 89%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/cpp_pubsub/cpp_pubsub_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[7.999992] (cpp_pubsub) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/cpp_pubsub/cpp_pubsub_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[8.003560] (cpp_pubsub) StdoutLine: {'line': b'[ 91%] Built target cpp_pubsub__rosidl_typesupport_c__pyext\n'}
+[8.015101] (cpp_pubsub) StdoutLine: {'line': b'[ 91%] Built target cpp_pubsub__rosidl_typesupport_introspection_c__pyext\n'}
+[8.016190] (-) TimerEvent: {}
+[8.116935] (-) TimerEvent: {}
+[8.143248] (cpp_pubsub) StdoutLine: {'line': b'[ 91%] Built target cpp_pubsub__rosidl_typesupport_fastrtps_c__pyext\n'}
+[8.217056] (-) TimerEvent: {}
+[8.317423] (-) TimerEvent: {}
+[8.417804] (-) TimerEvent: {}
+[8.518180] (-) TimerEvent: {}
+[8.618580] (-) TimerEvent: {}
+[8.718934] (-) TimerEvent: {}
+[8.808590] (cpp_pubsub) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[8.808863] (cpp_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[8.809036] (cpp_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[8.809200] (cpp_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[8.809342] (cpp_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[8.809476] (cpp_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[8.809621] (cpp_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/executor.hpp:36\x1b[m\x1b[K,\n'}
+[8.809772] (cpp_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[8.809917] (cpp_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[8.810062] (cpp_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156\x1b[m\x1b[K,\n'}
+[8.810204] (cpp_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fabrizzio/ros2_ws/src/cpp_pubsub/src/server_speaker.cpp:27\x1b[m\x1b[K:\n'}
+[8.810346] (cpp_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fabrizzio/ros2_ws/src/cpp_pubsub/src/server_speaker.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid speak(std::shared_ptr<cpp_pubsub::srv::Speak_Request_<std::allocator<void> > >, std::shared_ptr<cpp_pubsub::srv::Speak_Response_<std::allocator<void> > >)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[8.810502] (cpp_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fabrizzio/ros2_ws/src/cpp_pubsub/src/server_speaker.cpp:44:5:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktoo many arguments for format [\x1b[01;35m\x1b[K-Wformat-extra-args\x1b[m\x1b[K]\n'}
+[8.810648] (cpp_pubsub) StderrLine: {'line': b'   44 |     \x1b[01;35m\x1b[K"Request received by speak server"\x1b[m\x1b[K,\n'}
+[8.810793] (cpp_pubsub) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.819047] (-) TimerEvent: {}
+[8.919402] (-) TimerEvent: {}
+[9.019894] (-) TimerEvent: {}
+[9.120259] (-) TimerEvent: {}
+[9.220631] (-) TimerEvent: {}
+[9.321042] (-) TimerEvent: {}
+[9.421435] (-) TimerEvent: {}
+[9.422245] (cpp_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fabrizzio/ros2_ws/src/cpp_pubsub/src/publisher_member_function.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint MinimalPublisher::param_callback(const rclcpp::Parameter&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[9.422542] (cpp_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fabrizzio/ros2_ws/src/cpp_pubsub/src/publisher_member_function.cpp:170:48:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kparam\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[9.422740] (cpp_pubsub) StderrLine: {'line': b'  170 |   int param_callback(\x1b[01;35m\x1b[Kconst rclcpp::Parameter & param\x1b[m\x1b[K)\n'}
+[9.422909] (cpp_pubsub) StderrLine: {'line': b'      |                      \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[9.521553] (-) TimerEvent: {}
+[9.621936] (-) TimerEvent: {}
+[9.722293] (-) TimerEvent: {}
+[9.822640] (-) TimerEvent: {}
+[9.922999] (-) TimerEvent: {}
+[10.023340] (-) TimerEvent: {}
+[10.123678] (-) TimerEvent: {}
+[10.224024] (-) TimerEvent: {}
+[10.272341] (cpp_pubsub) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking CXX executable server\x1b[0m\n'}
+[10.324165] (-) TimerEvent: {}
+[10.424695] (-) TimerEvent: {}
+[10.525474] (-) TimerEvent: {}
+[10.560682] (cpp_pubsub) StdoutLine: {'line': b'[ 93%] Built target server\n'}
+[10.625622] (-) TimerEvent: {}
+[10.725966] (-) TimerEvent: {}
+[10.826260] (-) TimerEvent: {}
+[10.926626] (-) TimerEvent: {}
+[10.944943] (cpp_pubsub) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking CXX executable client\x1b[0m\n'}
+[11.026709] (-) TimerEvent: {}
+[11.127067] (-) TimerEvent: {}
+[11.227509] (-) TimerEvent: {}
+[11.244905] (cpp_pubsub) StdoutLine: {'line': b'[ 95%] Built target client\n'}
+[11.327649] (-) TimerEvent: {}
+[11.427982] (-) TimerEvent: {}
+[11.528335] (-) TimerEvent: {}
+[11.628668] (-) TimerEvent: {}
+[11.729034] (-) TimerEvent: {}
+[11.829349] (-) TimerEvent: {}
+[11.929668] (-) TimerEvent: {}
+[12.030018] (-) TimerEvent: {}
+[12.130332] (-) TimerEvent: {}
+[12.230652] (-) TimerEvent: {}
+[12.330996] (-) TimerEvent: {}
+[12.431293] (-) TimerEvent: {}
+[12.531591] (-) TimerEvent: {}
+[12.631917] (-) TimerEvent: {}
+[12.732286] (-) TimerEvent: {}
+[12.832635] (-) TimerEvent: {}
+[12.932976] (-) TimerEvent: {}
+[13.033287] (-) TimerEvent: {}
+[13.133608] (-) TimerEvent: {}
+[13.233987] (-) TimerEvent: {}
+[13.334296] (-) TimerEvent: {}
+[13.434662] (-) TimerEvent: {}
+[13.534981] (-) TimerEvent: {}
+[13.636060] (-) TimerEvent: {}
+[13.737622] (-) TimerEvent: {}
+[13.837952] (-) TimerEvent: {}
+[13.938310] (-) TimerEvent: {}
+[14.038757] (-) TimerEvent: {}
+[14.139078] (-) TimerEvent: {}
+[14.239374] (-) TimerEvent: {}
+[14.339715] (-) TimerEvent: {}
+[14.439987] (-) TimerEvent: {}
+[14.540326] (-) TimerEvent: {}
+[14.640631] (-) TimerEvent: {}
+[14.740929] (-) TimerEvent: {}
+[14.841249] (-) TimerEvent: {}
+[14.941558] (-) TimerEvent: {}
+[15.041914] (-) TimerEvent: {}
+[15.142286] (-) TimerEvent: {}
+[15.242625] (-) TimerEvent: {}
+[15.342943] (-) TimerEvent: {}
+[15.443288] (-) TimerEvent: {}
+[15.543585] (-) TimerEvent: {}
+[15.643893] (-) TimerEvent: {}
+[15.744177] (-) TimerEvent: {}
+[15.844505] (-) TimerEvent: {}
+[15.944898] (-) TimerEvent: {}
+[15.972084] (cpp_pubsub) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking CXX executable listener\x1b[0m\n'}
+[16.045032] (-) TimerEvent: {}
+[16.145368] (-) TimerEvent: {}
+[16.245672] (-) TimerEvent: {}
+[16.345974] (-) TimerEvent: {}
+[16.446285] (-) TimerEvent: {}
+[16.489448] (cpp_pubsub) StdoutLine: {'line': b'[ 97%] Built target listener\n'}
+[16.546428] (-) TimerEvent: {}
+[16.646780] (-) TimerEvent: {}
+[16.747100] (-) TimerEvent: {}
+[16.847413] (-) TimerEvent: {}
+[16.947683] (-) TimerEvent: {}
+[17.047973] (-) TimerEvent: {}
+[17.148259] (-) TimerEvent: {}
+[17.248561] (-) TimerEvent: {}
+[17.348874] (-) TimerEvent: {}
+[17.449188] (-) TimerEvent: {}
+[17.549446] (-) TimerEvent: {}
+[17.649717] (-) TimerEvent: {}
+[17.750219] (-) TimerEvent: {}
+[17.850605] (-) TimerEvent: {}
+[17.950952] (-) TimerEvent: {}
+[18.034927] (cpp_pubsub) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable talker\x1b[0m\n'}
+[18.051062] (-) TimerEvent: {}
+[18.151470] (-) TimerEvent: {}
+[18.251865] (-) TimerEvent: {}
+[18.352351] (-) TimerEvent: {}
+[18.453109] (-) TimerEvent: {}
+[18.553444] (-) TimerEvent: {}
+[18.653740] (-) TimerEvent: {}
+[18.749837] (cpp_pubsub) StdoutLine: {'line': b'[100%] Built target talker\n'}
+[18.753856] (-) TimerEvent: {}
+[18.782011] (cpp_pubsub) CommandEnded: {'returncode': 0}
+[18.854016] (-) TimerEvent: {}
+[18.898922] (cpp_pubsub) JobProgress: {'identifier': 'cpp_pubsub', 'progress': 'install'}
+[18.916654] (cpp_pubsub) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub'], 'cwd': '/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fabrizzio'), ('SSH_AGENT_PID', '1997'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/snap/code/146/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/fabrizzio/ros2_ws/install/gazebo_ros/lib:/home/fabrizzio/ros2_ws/install/gazebo_msgs/lib:/home/fabrizzio/ros2_ws/install/cpp_pubsub/lib:/home/fabrizzio/catkin_ws/devel/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/fabrizzio'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('TERM_PROGRAM_VERSION', '1.84.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/snap/code/146/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/snap/code/146/usr/share/code/code'), ('MANAGERPID', '1821'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3453'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/fabrizzio/ros2_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'fabrizzio'), ('JOURNAL_STREAM', '8:53375'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('PKG_CONFIG_PATH', '/home/fabrizzio/catkin_ws/devel/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('XDG_DATA_DIRS_VSCODE_SNAP_ORIG', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('USERNAME', 'fabrizzio'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/home/fabrizzio/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/lenovo:@/tmp/.ICE-unix/2035,unix/lenovo:/tmp/.ICE-unix/2035'), ('INVOCATION_ID', 'fb73c1fc12f7492b8bfd4d450690f6da'), ('XDG_MENU_PREFIX', 'gnome-'), ('BAMF_DESKTOP_FILE_HINT', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-78e9740a7d.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/fabrizzio/ros2_ws/install/walker_808x:/home/fabrizzio/ros2_ws/install/gazebo_ros_pkgs:/home/fabrizzio/ros2_ws/install/gazebo_ros:/home/fabrizzio/ros2_ws/install/gazebo_msgs:/home/fabrizzio/ros2_ws/install/cpp_pubsub:/opt/ros/galactic'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('ROS_MASTER_URI', 'http://localhost:11311'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-01'), ('PYTHONPATH', '/home/fabrizzio/ros2_ws/install/gazebo_ros/lib/python3.8/site-packages:/home/fabrizzio/ros2_ws/install/gazebo_msgs/lib/python3.8/site-packages:/home/fabrizzio/ros2_ws/install/cpp_pubsub/lib/python3.8/site-packages:/home/fabrizzio/catkin_ws/devel/lib/python3/dist-packages:/opt/ros/galactic/lib/python3.8/site-packages::/usr/lib/python3/dist-packages'), ('ROS_HOSTNAME', 'localhost'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/fabrizzio/ros2_ws/install/walker_808x:/home/fabrizzio/ros2_ws/install/gazebo_ros_pkgs:/home/fabrizzio/ros2_ws/install/gazebo_ros:/home/fabrizzio/ros2_ws/install/gazebo_msgs:/home/fabrizzio/ros2_ws/install/gazebo_dev:/home/fabrizzio/ros2_ws/install/cpp_pubsub:/opt/ros/galactic:/home/fabrizzio/catkin_ws/devel')]), 'shell': False}
+[18.929464] (cpp_pubsub) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[18.929886] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/ament_index/resource_index/rosidl_interfaces/cpp_pubsub\n'}
+[18.930186] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub\n'}
+[18.930314] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg\n'}
+[18.930432] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail\n'}
+[18.930548] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__type_support.h\n'}
+[18.930629] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__struct.h\n'}
+[18.930709] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__functions.c\n'}
+[18.930825] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__functions.h\n'}
+[18.930959] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/rosidl_generator_c__visibility_control.h\n'}
+[18.931076] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/message.h\n'}
+[18.931164] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv\n'}
+[18.931240] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/speak.h\n'}
+[18.931335] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail\n'}
+[18.931431] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__functions.c\n'}
+[18.931727] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__functions.h\n'}
+[18.931840] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__struct.h\n'}
+[18.931935] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__type_support.h\n'}
+[18.932187] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/environment/library_path.sh\n'}
+[18.932461] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/environment/library_path.dsv\n'}
+[18.932722] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_generator_c.so\n'}
+[18.933402] (cpp_pubsub) StdoutLine: {'line': b'-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_generator_c.so" to ""\n'}
+[18.933662] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub\n'}
+[18.933879] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg\n'}
+[18.933981] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail\n'}
+[18.934187] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__rosidl_typesupport_fastrtps_c.h\n'}
+[18.934394] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[18.934556] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv\n'}
+[18.934688] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail\n'}
+[18.934815] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__rosidl_typesupport_fastrtps_c.h\n'}
+[18.934945] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_fastrtps_c.so\n'}
+[18.935147] (cpp_pubsub) StdoutLine: {'line': b'-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[18.935304] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub\n'}
+[18.935479] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg\n'}
+[18.935654] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail\n'}
+[18.935806] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[18.935967] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/dds_fastrtps\n'}
+[18.936123] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[18.936249] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv\n'}
+[18.936376] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail\n'}
+[18.936497] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[18.936632] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/dds_fastrtps\n'}
+[18.936834] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_fastrtps_cpp.so\n'}
+[18.937010] (cpp_pubsub) StdoutLine: {'line': b'-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[18.937439] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub\n'}
+[18.937608] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg\n'}
+[18.937774] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail\n'}
+[18.937909] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__type_support.c\n'}
+[18.938076] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__rosidl_typesupport_introspection_c.h\n'}
+[18.938200] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[18.938323] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv\n'}
+[18.938444] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail\n'}
+[18.938604] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__rosidl_typesupport_introspection_c.h\n'}
+[18.938768] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__type_support.c\n'}
+[18.938895] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_introspection_c.so\n'}
+[18.939017] (cpp_pubsub) StdoutLine: {'line': b'-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_introspection_c.so" to ""\n'}
+[18.939169] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_c.so\n'}
+[18.939362] (cpp_pubsub) StdoutLine: {'line': b'-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_c.so" to ""\n'}
+[18.939513] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub\n'}
+[18.939661] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg\n'}
+[18.939811] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail\n'}
+[18.939963] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__struct.hpp\n'}
+[18.940154] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__builder.hpp\n'}
+[18.940305] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__traits.hpp\n'}
+[18.940457] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/message.hpp\n'}
+[18.940607] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv\n'}
+[18.940739] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail\n'}
+[18.940950] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__struct.hpp\n'}
+[18.941114] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__builder.hpp\n'}
+[18.941258] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__traits.hpp\n'}
+[18.941461] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/speak.hpp\n'}
+[18.941686] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub\n'}
+[18.941824] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg\n'}
+[18.941936] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail\n'}
+[18.942057] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__rosidl_typesupport_introspection_cpp.hpp\n'}
+[18.942168] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__type_support.cpp\n'}
+[18.942277] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv\n'}
+[18.942415] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail\n'}
+[18.942565] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__rosidl_typesupport_introspection_cpp.hpp\n'}
+[18.942673] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__type_support.cpp\n'}
+[18.942784] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_introspection_cpp.so\n'}
+[18.942898] (cpp_pubsub) StdoutLine: {'line': b'-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[18.943036] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_cpp.so\n'}
+[18.943171] (cpp_pubsub) StdoutLine: {'line': b'-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_cpp.so" to ""\n'}
+[18.943308] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/environment/pythonpath.sh\n'}
+[18.943414] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/environment/pythonpath.dsv\n'}
+[18.943545] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/__init__.py\n'}
+[18.954073] (-) TimerEvent: {}
+[18.987867] (cpp_pubsub) StdoutLine: {'line': b"Compiling '/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/__init__.py'...\n"}
+[18.992038] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/srv\n'}
+[18.992265] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/srv/_speak.py\n'}
+[18.992372] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/srv/_speak_s.c\n'}
+[18.992521] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/srv/__init__.py\n'}
+[18.992727] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/msg\n'}
+[18.992937] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/msg/_message_s.c\n'}
+[18.993026] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/msg/__init__.py\n'}
+[18.993116] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/msg/_message.py\n'}
+[18.993349] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/cpp_pubsub_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[18.993925] (cpp_pubsub) StdoutLine: {'line': b'-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/cpp_pubsub_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[18.994152] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/cpp_pubsub_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[18.994810] (cpp_pubsub) StdoutLine: {'line': b'-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/cpp_pubsub_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[18.995110] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/cpp_pubsub_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[18.995674] (cpp_pubsub) StdoutLine: {'line': b'-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/cpp_pubsub_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[18.995861] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__python.so\n'}
+[18.996285] (cpp_pubsub) StdoutLine: {'line': b'-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__python.so" to ""\n'}
+[18.996556] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/srv/Speak.idl\n'}
+[18.996699] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/msg/Message.idl\n'}
+[18.996839] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/srv/Speak.srv\n'}
+[18.996931] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/srv/Speak_Request.msg\n'}
+[18.997235] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/srv/Speak_Response.msg\n'}
+[18.997413] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/msg/Message.msg\n'}
+[18.997707] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/cpp_pubsub/talker\n'}
+[19.002414] (cpp_pubsub) StdoutLine: {'line': b'-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/cpp_pubsub/talker" to ""\n'}
+[19.002571] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/cpp_pubsub/listener\n'}
+[19.005913] (cpp_pubsub) StdoutLine: {'line': b'-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/cpp_pubsub/listener" to ""\n'}
+[19.006068] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/cpp_pubsub/server\n'}
+[19.006879] (cpp_pubsub) StdoutLine: {'line': b'-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/cpp_pubsub/server" to ""\n'}
+[19.007016] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/cpp_pubsub/client\n'}
+[19.007967] (cpp_pubsub) StdoutLine: {'line': b'-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/cpp_pubsub/client" to ""\n'}
+[19.008143] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub//launch\n'}
+[19.008310] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub//launch/bag_record.py\n'}
+[19.008429] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub//launch/beginner_tutorials.py\n'}
+[19.008582] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub\n'}
+[19.008732] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub\n'}
+[19.008876] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.sh\n'}
+[19.009022] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.dsv\n'}
+[19.009202] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/environment/path.sh\n'}
+[19.009390] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/environment/path.dsv\n'}
+[19.009555] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/local_setup.bash\n'}
+[19.009722] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/local_setup.sh\n'}
+[19.010003] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/local_setup.zsh\n'}
+[19.010201] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/local_setup.dsv\n'}
+[19.010491] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/package.dsv\n'}
+[19.010673] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/ament_index/resource_index/packages/cpp_pubsub\n'}
+[19.010839] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_generator_cExport.cmake\n'}
+[19.011042] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_generator_cExport-noconfig.cmake\n'}
+[19.011296] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_typesupport_introspection_cExport.cmake\n'}
+[19.011528] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[19.011768] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_typesupport_cExport.cmake\n'}
+[19.011978] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[19.012221] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_generator_cppExport.cmake\n'}
+[19.012535] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[19.012703] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[19.012923] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_typesupport_cppExport.cmake\n'}
+[19.013162] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[19.013367] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/rosidl_cmake-extras.cmake\n'}
+[19.013566] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[19.013789] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[19.014003] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[19.014209] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[19.014405] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[19.014607] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[19.014804] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig.cmake\n'}
+[19.015005] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig-version.cmake\n'}
+[19.015202] (cpp_pubsub) StdoutLine: {'line': b'-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/package.xml\n'}
+[19.017860] (cpp_pubsub) CommandEnded: {'returncode': 0}
+[19.054849] (-) TimerEvent: {}
+[19.155133] (-) TimerEvent: {}
+[19.256275] (-) TimerEvent: {}
+[19.357022] (-) TimerEvent: {}
+[19.457686] (-) TimerEvent: {}
+[19.558188] (-) TimerEvent: {}
+[19.658681] (-) TimerEvent: {}
+[19.760016] (-) TimerEvent: {}
+[19.802423] (cpp_pubsub) JobEnded: {'identifier': 'cpp_pubsub', 'rc': 0}
+[19.803257] (-) EventReactorShutdown: {}

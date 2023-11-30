@@ -34,8 +34,7 @@
  */
 void speak(
   const std::shared_ptr<cpp_pubsub::srv::Speak::Request> request,
-  std::shared_ptr<cpp_pubsub::srv::Speak::Response> response)
-{
+  std::shared_ptr<cpp_pubsub::srv::Speak::Response> response) {
   response->output =
     "Hi, my name is " + request->name + " and today is " + request->date;
 
@@ -56,8 +55,7 @@ void speak(
  * @param argv
  *
  */
-int main(int argc, char ** argv)
-{
+int main(int argc, char ** argv) {
   /**
    * @brief Initialize the ROS2 CPP client library
    */

@@ -1,0 +1,7 @@
+{
+  "package_name": "cpp_pubsub",
+  "non_idl_tuples": [
+    "/home/fabrizzio/ros2_ws/src/cpp_pubsub:srv/Speak.srv",
+    "/home/fabrizzio/ros2_ws/src/cpp_pubsub:msg/Message.msg"
+  ]
+}

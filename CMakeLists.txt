@@ -26,26 +26,32 @@ include(GoogleTest)
 set(THIS_PACKAGE_INCLUDE_DEPENDS
   rclcpp
   std_msgs
+  rosidl_default_generators
+  tf2
+  tf2_ros
+  geometry_msgs
+  rosbag2_cpp
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/Speak.srv"
   "msg/Message.msg"
-  DEPENDENCIES std_msgs)
+  DEPENDENCIES std_msgs
+)
 
 # adding the executables and naming them so we can run the nodes using ros2 run
 add_executable(talker src/publisher_member_function.cpp)
 ament_target_dependencies(talker rclcpp std_msgs tf2 tf2_ros geometry_msgs
-  cpp_pubsub)
+)
 
 add_executable(listener src/subscriber_member_function.cpp)
-ament_target_dependencies(listener rclcpp std_msgs cpp_pubsub)
+ament_target_dependencies(listener rclcpp std_msgs cpp_pubsub tf2 tf2_ros)
 
 add_executable(server src/server_speaker.cpp)
-ament_target_dependencies(server rclcpp std_msgs cpp_pubsub)
+ament_target_dependencies(server rclcpp std_msgs tf2 tf2_ros)
 
 add_executable(client src/client_response.cpp)
-ament_target_dependencies(client rclcpp std_msgs cpp_pubsub)
+ament_target_dependencies(client rclcpp std_msgs )
 
 #add_executable(simple-gtest test/simple_test.cpp)
 #ament_target_dependencies(simple-gtest rclcpp std_msgs cpp_pubsub)
@@ -56,7 +62,6 @@ install(TARGETS
   listener
   server
   client
-#  simple-gtest
   DESTINATION lib/${PROJECT_NAME}
 )
 
@@ -72,8 +77,6 @@ rosidl_target_interfaces(client
 #rosidl_target_interfaces(simple-gtest
 #  ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
-#add_subdirectory(test)
-
 install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME}/)
 
@@ -84,16 +87,21 @@ if(BUILD_TESTING)
   # exclude the following tests when running colcon-test
   set(ament_cmake_copyright_FOUND TRUE)
   set(ament_cmake_cpplint_FOUND TRUE)
+  set(ament_cmake_uncrustify_FOUND TRUE)
+  set(ament_cmake_lint_cmake_FOUND TRUE)
+  set(ament_cmake_flake8_FOUND TRUE)
 
   ament_lint_auto_find_test_dependencies()
 
-#  set(TESTFILES
-#    test/simple_test.cpp)
-#  ament_add_gtest(test_${PROJECT_NAME} ${TESTFILES})
-#  ament_target_dependencies(test_${PROJECT_NAME} ${THIS_PACKAGE_INCLUDE_DEPENDS})
-#  install(TARGETS
-#    test_${PROJECT_NAME}
-#    DESTINATION lib/${PROJECT_NAME})
+############# Uncomment lines below after first build #############
+  set(TESTFILES
+    test/simple_test.cpp)
+  ament_add_gtest(test_${PROJECT_NAME} ${TESTFILES})
+  ament_target_dependencies(test_${PROJECT_NAME} rclcpp std_msgs cpp_pubsub)
+  install(TARGETS
+    test_${PROJECT_NAME}
+    DESTINATION lib/${PROJECT_NAME})
+############# Uncomment lines above after first build #############
 
 endif()
 

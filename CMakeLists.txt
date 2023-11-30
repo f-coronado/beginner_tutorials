@@ -18,7 +18,7 @@ find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(rosbag2_cpp REQUIRED)
-find_package(cpp_pubsub REQUIRED)
+#find_package(cpp_pubsub REQUIRED)
 
 enable_testing()
 include(GoogleTest)
@@ -45,7 +45,12 @@ ament_target_dependencies(talker rclcpp std_msgs tf2 tf2_ros geometry_msgs
 )
 
 add_executable(listener src/subscriber_member_function.cpp)
-ament_target_dependencies(listener rclcpp std_msgs cpp_pubsub tf2 tf2_ros)
+ament_target_dependencies(listener 
+rclcpp 
+std_msgs 
+#cpp_pubsub 
+tf2 
+tf2_ros)
 
 add_executable(server src/server_speaker.cpp)
 ament_target_dependencies(server rclcpp std_msgs tf2 tf2_ros)
@@ -94,13 +99,13 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 
 ############# Uncomment lines below after first build #############
-  set(TESTFILES
-    test/simple_test.cpp)
-  ament_add_gtest(test_${PROJECT_NAME} ${TESTFILES})
-  ament_target_dependencies(test_${PROJECT_NAME} rclcpp std_msgs cpp_pubsub)
-  install(TARGETS
-    test_${PROJECT_NAME}
-    DESTINATION lib/${PROJECT_NAME})
+#  set(TESTFILES
+#    test/simple_test.cpp)
+#  ament_add_gtest(test_${PROJECT_NAME} ${TESTFILES})
+#  ament_target_dependencies(test_${PROJECT_NAME} rclcpp std_msgs cpp_pubsub)
+#  install(TARGETS
+#    test_${PROJECT_NAME}
+#    DESTINATION lib/${PROJECT_NAME})
 ############# Uncomment lines above after first build #############
 
 endif()

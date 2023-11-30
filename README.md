@@ -22,7 +22,7 @@ Source your setup.bash
 source /path/to/your/ros2_ws/install/setup.bash
 ```
 
-Now uncomment lines xx, xx, xx and xx in CMakeLists.txt and rebuild
+Now uncomment lines 21, 51, 97-103 in CMakeLists.txt and rebuild
 ```sh
 colcon build --packages-select cpp_pubsub
 ```

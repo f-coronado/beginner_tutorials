@@ -1,0 +1,301 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found rclcpp: 9.2.2 (/opt/ros/galactic/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+-- Found FastRTPS: /opt/ros/galactic/include  
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 0.22.6 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found rosidl_default_generators: 1.1.1 (/opt/ros/galactic/share/rosidl_default_generators/cmake)
+-- Found tf2: 0.17.5 (/opt/ros/galactic/share/tf2/cmake)
+-- Found tf2_ros: 0.17.5 (/opt/ros/galactic/share/tf2_ros/cmake)
+-- Found rosbag2_cpp: 0.9.2 (/opt/ros/galactic/share/rosbag2_cpp/cmake)
+-- Found cpp_pubsub: 1.3.0 (/home/fabrizzio/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+-- Found ament_cmake_ros: 0.9.2 (/opt/ros/galactic/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+-- Found python_cmake_module: 0.8.1 (/opt/ros/galactic/share/python_cmake_module/cmake)
+-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+-- Found PythonExtra: .so  
+-- Found ament_lint_auto: 0.10.7 (/opt/ros/galactic/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub/rosidl_generator_c>;/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub/rosidl_generator_c;/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub/rosidl_generator_cpp;/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub/rosidl_typesupport_fastrtps_c;/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub/rosidl_typesupport_fastrtps_cpp;$<BUILD_INTERFACE:/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub/rosidl_typesupport_introspection_c>;$<BUILD_INTERFACE:/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub/rosidl_typesupport_c>;$<BUILD_INTERFACE:/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub/rosidl_generator_cpp>;/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub/rosidl_generator_py
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub
+[35m[1mScanning dependencies of target cpp_pubsub__cpp[0m
+[  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[35m[1mScanning dependencies of target cpp_pubsub__rosidl_generator_c[0m
+[  4%] Built target cpp_pubsub__cpp
+[  6%] [32mBuilding C object CMakeFiles/cpp_pubsub__rosidl_generator_c.dir/rosidl_generator_c/cpp_pubsub/srv/detail/speak__functions.c.o[0m
+[  8%] [32mBuilding C object CMakeFiles/cpp_pubsub__rosidl_generator_c.dir/rosidl_generator_c/cpp_pubsub/msg/detail/message__functions.c.o[0m
+[ 10%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[ 12%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[ 14%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[ 17%] [32m[1mLinking C shared library libcpp_pubsub__rosidl_generator_c.so[0m
+[ 17%] Built target cpp_pubsub__rosidl_generator_c
+[ 19%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[ 21%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[35m[1mScanning dependencies of target cpp_pubsub__rosidl_typesupport_introspection_cpp[0m
+[35m[1mScanning dependencies of target cpp_pubsub__rosidl_typesupport_cpp[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/cpp_pubsub__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cpp_pubsub/srv/detail/speak__type_support.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/cpp_pubsub__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cpp_pubsub/msg/detail/message__type_support.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/cpp_pubsub__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cpp_pubsub/srv/speak__type_support.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/cpp_pubsub__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cpp_pubsub/msg/message__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target cpp_pubsub__rosidl_typesupport_fastrtps_cpp[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/cpp_pubsub__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cpp_pubsub/msg/detail/dds_fastrtps/message__type_support.cpp.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/cpp_pubsub__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cpp_pubsub/srv/detail/dds_fastrtps/speak__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target cpp_pubsub__rosidl_typesupport_c[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/cpp_pubsub__rosidl_typesupport_c.dir/rosidl_typesupport_c/cpp_pubsub/srv/speak__type_support.cpp.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/cpp_pubsub__rosidl_typesupport_c.dir/rosidl_typesupport_c/cpp_pubsub/msg/message__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target cpp_pubsub__rosidl_typesupport_introspection_c[0m
+[ 40%] [32m[1mLinking CXX shared library libcpp_pubsub__rosidl_typesupport_c.so[0m
+[ 42%] [32mBuilding C object CMakeFiles/cpp_pubsub__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cpp_pubsub/srv/detail/speak__type_support.c.o[0m
+[ 42%] Built target cpp_pubsub__rosidl_typesupport_c
+[ 44%] [32mBuilding C object CMakeFiles/cpp_pubsub__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cpp_pubsub/msg/detail/message__type_support.c.o[0m
+[ 46%] [32m[1mLinking CXX shared library libcpp_pubsub__rosidl_typesupport_cpp.so[0m
+[ 48%] [32m[1mLinking CXX shared library libcpp_pubsub__rosidl_typesupport_introspection_cpp.so[0m
+[ 51%] [32m[1mLinking C shared library libcpp_pubsub__rosidl_typesupport_introspection_c.so[0m
+[ 51%] Built target cpp_pubsub__rosidl_typesupport_cpp
+[ 51%] Built target cpp_pubsub__rosidl_typesupport_introspection_c
+[ 51%] Built target cpp_pubsub__rosidl_typesupport_introspection_cpp
+[ 53%] [32m[1mLinking CXX shared library libcpp_pubsub__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 53%] Built target cpp_pubsub__rosidl_typesupport_fastrtps_cpp
+[ 55%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[35m[1mScanning dependencies of target cpp_pubsub__rosidl_typesupport_fastrtps_c[0m
+[ 59%] [32mBuilding CXX object CMakeFiles/cpp_pubsub__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cpp_pubsub/srv/detail/speak__type_support_c.cpp.o[0m
+[ 59%] [32mBuilding CXX object CMakeFiles/cpp_pubsub__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cpp_pubsub/msg/detail/message__type_support_c.cpp.o[0m
+[ 61%] [32m[1mLinking CXX shared library libcpp_pubsub__rosidl_typesupport_fastrtps_c.so[0m
+[ 61%] Built target cpp_pubsub__rosidl_typesupport_fastrtps_c
+[35m[1mScanning dependencies of target cpp_pubsub[0m
+[ 61%] Built target cpp_pubsub
+[35m[1mScanning dependencies of target cpp_pubsub__py[0m
+[35m[1mScanning dependencies of target client[0m
+[35m[1mScanning dependencies of target talker[0m
+[35m[1mScanning dependencies of target server[0m
+[35m[1mScanning dependencies of target listener[0m
+[ 63%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 65%] [32mBuilding CXX object CMakeFiles/client.dir/src/client_response.cpp.o[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/server.dir/src/server_speaker.cpp.o[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/listener.dir/src/subscriber_member_function.cpp.o[0m
+[ 72%] Built target cpp_pubsub__py
+[35m[1mScanning dependencies of target cpp_pubsub__python[0m
+[ 74%] [32mBuilding C object CMakeFiles/cpp_pubsub__python.dir/rosidl_generator_py/cpp_pubsub/srv/_speak_s.c.o[0m
+[ 76%] [32mBuilding C object CMakeFiles/cpp_pubsub__python.dir/rosidl_generator_py/cpp_pubsub/msg/_message_s.c.o[0m
+[ 78%] [32m[1mLinking C shared library rosidl_generator_py/cpp_pubsub/libcpp_pubsub__python.so[0m
+[ 78%] Built target cpp_pubsub__python
+[35m[1mScanning dependencies of target cpp_pubsub__rosidl_typesupport_c__pyext[0m
+[35m[1mScanning dependencies of target cpp_pubsub__rosidl_typesupport_introspection_c__pyext[0m
+[35m[1mScanning dependencies of target cpp_pubsub__rosidl_typesupport_fastrtps_c__pyext[0m
+[ 80%] [32mBuilding C object CMakeFiles/cpp_pubsub__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/cpp_pubsub/_cpp_pubsub_s.ep.rosidl_typesupport_c.c.o[0m
+[ 82%] [32mBuilding C object CMakeFiles/cpp_pubsub__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/cpp_pubsub/_cpp_pubsub_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 85%] [32mBuilding C object CMakeFiles/cpp_pubsub__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/cpp_pubsub/_cpp_pubsub_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[ 87%] [32m[1mLinking C shared library rosidl_generator_py/cpp_pubsub/cpp_pubsub_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[ 89%] [32m[1mLinking C shared library rosidl_generator_py/cpp_pubsub/cpp_pubsub_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[ 91%] [32m[1mLinking CXX shared library rosidl_generator_py/cpp_pubsub/cpp_pubsub_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[ 91%] Built target cpp_pubsub__rosidl_typesupport_c__pyext
+[ 91%] Built target cpp_pubsub__rosidl_typesupport_introspection_c__pyext
+[ 91%] Built target cpp_pubsub__rosidl_typesupport_fastrtps_c__pyext
+[ 93%] [32m[1mLinking CXX executable server[0m
+[ 93%] Built target server
+[ 95%] [32m[1mLinking CXX executable client[0m
+[ 95%] Built target client
+[ 97%] [32m[1mLinking CXX executable listener[0m
+[ 97%] Built target listener
+[100%] [32m[1mLinking CXX executable talker[0m
+[100%] Built target talker
+-- Install configuration: ""
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/ament_index/resource_index/rosidl_interfaces/cpp_pubsub
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__type_support.h
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__struct.h
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__functions.c
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__functions.h
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/rosidl_generator_c__visibility_control.h
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/message.h
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/speak.h
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__functions.c
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__functions.h
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__struct.h
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__type_support.h
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/environment/library_path.sh
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/environment/library_path.dsv
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_generator_c.so
+-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_generator_c.so" to ""
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_fastrtps_c.so
+-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_fastrtps_c.so" to ""
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/dds_fastrtps
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/dds_fastrtps
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_fastrtps_cpp.so
+-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_fastrtps_cpp.so" to ""
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__type_support.c
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__rosidl_typesupport_introspection_c.h
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__rosidl_typesupport_introspection_c.h
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__type_support.c
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_introspection_c.so
+-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_c.so
+-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_c.so" to ""
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__struct.hpp
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__builder.hpp
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__traits.hpp
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/message.hpp
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__struct.hpp
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__builder.hpp
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__traits.hpp
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/speak.hpp
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/msg/detail/message__type_support.cpp
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv
+-- Up-to-date: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/include/cpp_pubsub/srv/detail/speak__type_support.cpp
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_introspection_cpp.so
+-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_introspection_cpp.so" to ""
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_cpp.so
+-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__rosidl_typesupport_cpp.so" to ""
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/environment/pythonpath.sh
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/environment/pythonpath.dsv
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/__init__.py
+Compiling '/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/__init__.py'...
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/srv
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/srv/_speak.py
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/srv/_speak_s.c
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/srv/__init__.py
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/msg
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/msg/_message_s.c
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/msg/__init__.py
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/msg/_message.py
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/cpp_pubsub_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/cpp_pubsub_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/cpp_pubsub_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/cpp_pubsub_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/cpp_pubsub_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/python3.8/site-packages/cpp_pubsub/cpp_pubsub_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__python.so
+-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/libcpp_pubsub__python.so" to ""
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/srv/Speak.idl
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/msg/Message.idl
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/srv/Speak.srv
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/srv/Speak_Request.msg
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/srv/Speak_Response.msg
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/msg/Message.msg
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/cpp_pubsub/talker
+-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/cpp_pubsub/talker" to ""
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/cpp_pubsub/listener
+-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/cpp_pubsub/listener" to ""
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/cpp_pubsub/server
+-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/cpp_pubsub/server" to ""
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/cpp_pubsub/client
+-- Set runtime path of "/home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/lib/cpp_pubsub/client" to ""
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub//launch
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub//launch/bag_record.py
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub//launch/beginner_tutorials.py
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.sh
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.dsv
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/environment/path.sh
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/environment/path.dsv
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/local_setup.bash
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/local_setup.sh
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/local_setup.zsh
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/local_setup.dsv
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/package.dsv
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/ament_index/resource_index/packages/cpp_pubsub
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_generator_cExport.cmake
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_generator_cExport-noconfig.cmake
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_typesupport_cExport.cmake
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_typesupport_cExport-noconfig.cmake
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_generator_cppExport.cmake
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_typesupport_cppExport.cmake
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsub__rosidl_typesupport_cppExport-noconfig.cmake
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/rosidl_cmake-extras.cmake
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig.cmake
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig-version.cmake
+-- Installing: /home/fabrizzio/ros2_ws/src/cpp_pubsub/install/cpp_pubsub/share/cpp_pubsub/package.xml

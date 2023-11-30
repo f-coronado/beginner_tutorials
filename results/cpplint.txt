@@ -1,5 +1,8 @@
-fabrizzio@lenovo:cpp_pubsub$ cpplint --filter="-legal/copyright" $( find . -name *.cpp | grep -vE -e "^./build/" )
+cpplint --filter="-legal/copyright" $(find . -name "*.cpp" -not -path "./build/*" -not -path "./install/*")
 Done processing ./src/client_response.cpp
 Done processing ./src/publisher_member_function.cpp
 Done processing ./src/server_speaker.cpp
 Done processing ./src/subscriber_member_function.cpp
+./test/simple_test.cpp:127:  Do not use namespace using-directives.  Use using-declarations instead.  [build/namespaces] [5]
+Done processing ./test/simple_test.cpp
+Total errors found: 1

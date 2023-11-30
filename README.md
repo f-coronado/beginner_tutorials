@@ -22,22 +22,20 @@ Source your setup.bash
 source /path/to/your/ros2_ws/install/setup.bash
 ```
 
-Open two new terminals by pressing Ctrl+Shift+T
-
-
-Run the publisher on one terminal
+Now uncomment lines 21, 51, 97-103 in CMakeLists.txt and rebuild
 ```sh
-ros2 run cpp_pubsub talker
+colcon build --packages-select cpp_pubsub
 ```
 
-Run the subscriber on another terminal
+Source your setup.bash again
 ```sh
-ros2 run cpp_pubsub listener
+source /path/to/your/ros2_ws/install/setup.bash
 ```
 
-Ctrl+C to end the script
-# Examples of how to use launch file and run nodes
-Launching the publisher, subscriber and server nodes from ros2_ws
+
+Ctrl+C to end the scripts
+# Running nodes and setting parameter
+Launching the publisher, subscriber and server nodes from ros2_ws using a launch file
 ```sh
 ros2 launch cpp_pubsub_beginner_tutorials.py
 ```
@@ -55,7 +53,7 @@ ros2 param set /minimal_publisher name john
 
 ```
 
-Alternatively you can run the nodes independently
+Alternatively you can run the nodes independently, make sure to run the server node first because the talker node waits for it
 ```sh
 ros2 run cpp_pubsub server
 ```
@@ -65,6 +63,58 @@ ros2 run cpp_pubsub talker
 ```sh
 ros2 run cpp_pubsub listener
 ```
+
+# Inspecting TF frames
+The publisher node sends the transform from the world to talk frame every 10s. In real time you can view the static transform being sent over using tf_ros executables.
+
+First launch beginner_tutorials.py
+```sh
+ros2 launch cpp_pubsub beginner_tutorials.py
+```
+Then use tf2_echo to view the frame sent from the source/world frame to target/talk frame
+```sh
+ros2 run tf2_ros tf2_echo world talk
+```
+Alternatively, you can use tf2_tools to create a diagram of frames being broadcasted by tf2 over ROS. 
+```sh
+ros2 run tf2_tools view_frames
+```
+
+# Running ROS test
+In your ros2 workspace, run the test
+```sh
+colcon test --packages-select cpp_pubsub
+```
+View the results
+```sh
+cat log/latest_test/cpp_pubsub/stdout_stderr.log
+```
+
+# Recording and playing back bag file
+Use bag_record launch file to run nodes and record automatically
+```sh
+ros2 launch cpp_pubsub bag_record.py bag_record:=true bag_filepath:=src/cpp_pubsub/results/bag_recordings
+```
+Note: This bag_filepath comes prepopulated. Everytime you record another bag either rename bag_filepath to something different or delete the populated folder.
+
+You can also play back a prerecorded bag file and view it in realtime, First launch listener node.
+```sh
+ros2 run cpp_pubsub listener
+```
+Then in a new terminal, navigate to bag recording folder and play the bag file
+```sh
+cd ~/your_ros2_workspace/src/cpp_pubsub/results/bag_recordings/
+ros2 bag play bag_recordings_0.db3
+```
+You should see the listener print messages from the bag. You can see more information about the bag recording using the following
+```sh
+ros2 bag info bag_recordings_0.db3 
+```
+You can disable bag recording by using the following
+```sh
+ros2 launch cpp_pubsub bag_record.py bag_record:=false bag_filepath:=src/cpp_pubsub/results/bag_recordings
+```
+
 
 ## Assumptions and Dependencies
 This project was built on ros2 humble, see below to install

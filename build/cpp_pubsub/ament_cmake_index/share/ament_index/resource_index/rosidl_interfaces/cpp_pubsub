@@ -1,0 +1,6 @@
+msg/Message.idl
+msg/Message.msg
+srv/Speak.idl
+srv/Speak.srv
+srv/Speak_Request.msg
+srv/Speak_Response.msg

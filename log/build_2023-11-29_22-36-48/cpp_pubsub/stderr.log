@@ -1,0 +1,33 @@
+CMake Warning at CMakeLists.txt:47 (add_executable):
+  Cannot generate a safe runtime search path for target listener because
+  there is a cycle in the constraint graph:
+
+    dir 0 is [/home/fabrizzio/ros2_ws/install/cpp_pubsub/lib]
+      dir 2 must precede it due to runtime library [libcpp_pubsub__rosidl_typesupport_cpp.so]
+    dir 1 is [/opt/ros/galactic/lib]
+    dir 2 is [/home/fabrizzio/ros2_ws/src/cpp_pubsub/build/cpp_pubsub]
+      dir 0 must precede it due to runtime library [libcpp_pubsub__rosidl_typesupport_introspection_c.so]
+    dir 3 is [/opt/ros/galactic/lib/x86_64-linux-gnu]
+
+  Some of these libraries may not be found correctly.
+
+
+In file included from [01m[K/opt/ros/galactic/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:36[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/fabrizzio/ros2_ws/src/cpp_pubsub/src/server_speaker.cpp:27[m[K:
+[01m[K/home/fabrizzio/ros2_ws/src/cpp_pubsub/src/server_speaker.cpp:[m[K In function ‘[01m[Kvoid speak(std::shared_ptr<cpp_pubsub::srv::Speak_Request_<std::allocator<void> > >, std::shared_ptr<cpp_pubsub::srv::Speak_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/fabrizzio/ros2_ws/src/cpp_pubsub/src/server_speaker.cpp:44:5:[m[K [01;35m[Kwarning: [m[Ktoo many arguments for format [[01;35m[K-Wformat-extra-args[m[K]
+   44 |     [01;35m[K"Request received by speak server"[m[K,
+      |     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fabrizzio/ros2_ws/src/cpp_pubsub/src/publisher_member_function.cpp:[m[K In member function ‘[01m[Kint MinimalPublisher::param_callback(const rclcpp::Parameter&)[m[K’:
+[01m[K/home/fabrizzio/ros2_ws/src/cpp_pubsub/src/publisher_member_function.cpp:170:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kparam[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  170 |   int param_callback([01;35m[Kconst rclcpp::Parameter & param[m[K)
+      |                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
